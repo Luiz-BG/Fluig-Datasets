@@ -1138,106 +1138,221 @@ WESLEY ADELAIDE ROSA
 YURI MILAN PORTO
 YURI ROMAN
 */
-array = {
-"Recursos":"AGENOR DE FARIA JUNIOR", "Vinculo": "Cooperado(a)",
-"Recursos":"AIRTON FERNANDES LIMA", "Vinculo": "PJ",
-"Recursos":"ALBERTO URSINI FILHO", "Vinculo": "PJ",
-"Recursos":"ALEXANDRE MONTANI DE OLIVEIRA", "Vinculo": "Cooperado(a)",
-"Recursos":"ALEXANDRE NUNES GOMES", "Vinculo": "Cooperado(a)",
-"Recursos":"ALISSON ELIAS FERNANDES", "Vinculo": "Cooperado(a)",
-"Recursos":"ANDRE DA SILVA RODRIGUES", "Vinculo": "Cooperado(a)",
-"Recursos":"ANDRÉ JUHEI HYODO", "Vinculo": "Cooperado(a)",
-"Recursos":"ANDRESSA AREM", "Vinculo": "Cooperado(a)",
-"Recursos":"ANDREZA SUELEM DUARTE ROCHA", "Vinculo": "Cooperado(a)",
-"Recursos":"AUGUSTO CESAR FERREIRA DE MEIRELLES", "Vinculo": "Cooperado(a)",
-"Recursos":"CAMILA THAMIRES MARTINS DE SOUZA", "Vinculo": "CLT",
-"Recursos":"CARLOS ALBERTO LOPES DA SILVA", "Vinculo": "Cooperado(a)",
-"Recursos":"CÉSAR AUGUSTO BRANDÃO", "Vinculo": "Cooperado(a)",
-"Recursos":"CLAITON ANDRADE", "Vinculo": "Cooperado(a)",
-"Recursos":"CLEBER CINTRA BARBOSA", "Vinculo": "PJ",
-"Recursos":"CRISTIAN EDUARDO HIDALGO CERDA", "Vinculo": "Cooperado(a)",
-"Recursos":"DANIELA CANHAMEIRO", "Vinculo": "Cooperado(a)",
-"Recursos":"DAVID DE OLIVEIRA SOBRINHO", "Vinculo": "PJ",
-"Recursos":"DJALMA BORGES NETO", "Vinculo": "PJ",
-"Recursos":"DOUGLAS GONÇALVES DE SOUZA", "Vinculo": "Cooperado(a)",
-"Recursos":"EDUARDO BERTAIA", "Vinculo": "Cooperado(a)",
-"Recursos":"EDUARDO CIDRON SÁNCHEZ CIDRÓN", "Vinculo": "PJ",
-"Recursos":"ELIVELTON DE OLIVEIRA CANEDO", "Vinculo": "CLT",
-"Recursos":"EMILY SILVA DE SOUZA", "Vinculo": "CLT",
-"Recursos":"EVALDO VAGNER BATISTA", "Vinculo": "PJ",
-"Recursos":"FÁBIO VERALDI ALVES", "Vinculo": "Cooperado(a)",
-"Recursos":"FELIPE DOS ANJOS DENTELLO", "Vinculo": "Cooperado(a)",
-"Recursos":"FERNANDA AMORIM SILVA", "Vinculo": "CLT",
-"Recursos":"FERNANDO EUGENIO DA SILVA", "Vinculo": "PJ",
-"Recursos":"FERNANDO LOURENÇONI BARRETO ALMEIDA", "Vinculo": "PJ",
-"Recursos":"GABRIEL ALVES DE SOUZA", "Vinculo": "CLT",
-"Recursos":"GABRIEL DE SOUSA SANTOS", "Vinculo": "Cooperado(a)",
-"Recursos":"GERSON APARECIDO DE JESUS BELINI", "Vinculo": "PJ",
-"Recursos":"GIOVANNA ANICETO POPOLILE", "Vinculo": "Cooperado(a)",
-"Recursos":"GIOVANNI FERNANDES DE SOUZA", "Vinculo": "Cooperado(a)",
-"Recursos":"GISELE BRANDÃO GENUINO", "Vinculo": "Cooperado(a)",
-"Recursos":"GUILHERME AUGUSTO DE LIMA SILVA", "Vinculo": "PJ",
-"Recursos":"HENRIQUE GARCIA  DE SOUZA", "Vinculo": "CLT",
-"Recursos":"HEVERSON CARLOS GOMES DE ARAUJO", "Vinculo": "Cooperado(a)",
-"Recursos":"ISRAEL VITAL MACHADO", "Vinculo": "CLT",
-"Recursos":"JANAÍNA GOMES DOS REIS", "Vinculo": "Cooperado(a)",
-"Recursos":"JEAN INÁCIO SILVA", "Vinculo": "Cooperado(a)",
-"Recursos":"JOAO PAULO PIRES", "Vinculo": "CLT",
-"Recursos":"JOÃO VITOR PLAZA", "Vinculo": "CLT",
-"Recursos":"JOSÉ ROBERTO DA SILVA", "Vinculo": "Cooperado(a)",
-"Recursos":"JUAREZ CARVALHO DE LIMA", "Vinculo": "Cooperado(a)",
-"Recursos":"JUAREZ DO NASCIMENTO CORDEIRO", "Vinculo": "PJ",
-"Recursos":"KAREN CRISTHINE COELHO", "Vinculo": "Cooperado(a)",
-"Recursos":"KARINA OLIVEIRA DE LIRA BARBOSA DE MOURA", "Vinculo": "PJ",
-"Recursos":"LARISSA DA SILVA LIMA", "Vinculo": "Cooperado(a)",
-"Recursos":"LARISSA MARCOS CAMPAGNA", "Vinculo": "PJ",
-"Recursos":"LEANDRO DOS ANJOS DENTELLO", "Vinculo": "CLT",
-"Recursos":"LEONARDO CLEMENTE CEZAR", "Vinculo": "Cooperado(a)",
-"Recursos":"LEONARDO MACEDO DOS SANTOS", "Vinculo": "Cooperado(a)",
-"Recursos":"LIARA CRUZ BONIFACIO", "Vinculo": "Cooperado(a)",
-"Recursos":"LUCAS MENDONÇA DE SOUZA GONÇALVES", "Vinculo": "Cooperado(a)",
-"Recursos":"LUCIANO MARABINI MARINS", "Vinculo": "Cooperado(a)",
-"Recursos":"LUIZ EDUARDO BRITO GOMES", "Vinculo": "CLT",
-"Recursos":"LUIZ GUSTAVO RIBEIRO DE OLIVEIRA", "Vinculo": "Cooperado(a)",
-"Recursos":"LUIZ NATALINO LOLO", "Vinculo": "Cooperado(a)",
-"Recursos":"MARCOS GEORGE MARICATO", "Vinculo": "PJ",
-"Recursos":"MARIANA DA SILVA BORGES ARAUJO", "Vinculo": "PJ",
-"Recursos":"MATHEUS ALVES DA SILVA", "Vinculo": "CLT",
-"Recursos":"MATHEUS FERNANDES DA SILVA", "Vinculo": "Cooperado(a)",
-"Recursos":"MURILO MENDONÇA TAVARES", "Vinculo": "PJ",
-"Recursos":"MYCHEL NATAL", "Vinculo": "PJ",
-"Recursos":"NORBERTO M DE MELO", "Vinculo": "Cooperado(a)",
-"Recursos":"PAULA DE CASSIA VALERIO CONTI", "Vinculo": "PJ",
-"Recursos":"PAULO VILAS BOAS", "Vinculo": "Cooperado(a)",
-"Recursos":"PEDRO HENRIQUE DA SILVA FAVA", "Vinculo": "CLT",
-"Recursos":"PEDRO IVO LEONEL BARBOSA", "Vinculo": "PJ",
-"Recursos":"RAFAEL DOMINGUES DE OLIVEIRA", "Vinculo": "PJ",
-"Recursos":"RAFAEL GOMES DO AMARAL", "Vinculo": "Cooperado(a)",
-"Recursos":"RAFAEL TURRINI CEGANTINI", "Vinculo": "Cooperado(a)",
-"Recursos":"RAFAEL VICTORIO BEZERRA", "Vinculo": "CLT",
-"Recursos":"RENAN GONÇALVES", "Vinculo": "PJ",
-"Recursos":"RENATO FREIRE JUNIOR", "Vinculo": "Cooperado(a)",
-"Recursos":"RODOLFO FERREIRA DA SILVA", "Vinculo": "Cooperado(a)",
-"Recursos":"ROLANDO PINTO DOS SANTOS JUNIOR LINDBERG", "Vinculo": "PJ",
-"Recursos":"ROSELI LEANDRO DO PRADO", "Vinculo": "PJ",
-"Recursos":"SAMUEL RENAN", "Vinculo": "CLT",
-"Recursos":"SERGIO NORIO KANASHIRO", "Vinculo": "Cooperado(a)",
-"Recursos":"STANKO ZLATKOVIC C. DE MIRANDA", "Vinculo": "PJ",
-"Recursos":"TADEU ROBES", "Vinculo": "PJ",
-"Recursos":"TATIANA ABRANCHES", "Vinculo": "Cooperado(a)",
-"Recursos":"TATIANA MAIA LUSITANO", "Vinculo": "PJ",
-"Recursos":"THAIS DIAS GOES", "Vinculo": "Cooperado(a)",
-"Recursos":"THALYS AUGUSTO", "Vinculo": "Cooperado(a)",
-"Recursos":"THIAGO GIDZINSKI FERNANDES ", "Vinculo": "PJ",
-"Recursos":"VALDIRENE MAGALHÃES PINHEIRO", "Vinculo": "Cooperado(a)",
-"Recursos":"VANDERLEI PIASSE", "Vinculo": "Cooperado(a)",
-"Recursos":"VICTOR GUILHERME ALVES", "Vinculo": "Cooperado(a)",
-"Recursos":"VINÍCIUS DAVI CHWALENSKY", "Vinculo": "PJ",
-"Recursos":"VINICIUS TEIXEIRA VENÂNCIO DA CUNHA", "Vinculo": "Cooperado(a)",
-"Recursos":"VITOR EDUARDO DE JESUS", "Vinculo": "Cooperado(a)",
-"Recursos":"WALBER SOBRINHO MENEZES", "Vinculo": "Cooperado(a)",
-"Recursos":"WALLACE RODRIGUES", "Vinculo": "Cooperado(a)",
-"Recursos":"WESLEY ADELAIDE ROSA", "Vinculo": "Cooperado(a)",
-"Recursos":"YURI MILAN PORTO", "Vinculo": "PJ",
-"Recursos":"YURI ROMAN", "Vinculo": "Cooperado(a)"
+var newValues = [
+{"Recursos": "AGENOR DE FARIA JUNIOR", "Sistema(s)":"Fluig", "Vinculo": "Cooperado(a)"},
+{"Recursos": "AIRTON FERNANDES LIMA", "Sistema(s)":"Protheus", "Vinculo": "PJ"},
+{"Recursos": "ALBERTO URSINI FILHO", "Sistema(s)":"Protheus", "Vinculo": "PJ"},
+{"Recursos": "ALEXANDRE MONTANI DE OLIVEIRA", "Sistema(s)":"Protheus", "Vinculo": "Cooperado(a)"},
+{"Recursos": "ALEXANDRE NUNES GOMES", "Sistema(s)":"Protheus", "Vinculo": "Cooperado(a)"},
+{"Recursos": "ALISSON ELIAS FERNANDES", "Sistema(s)":"Protheus", "Vinculo": "Cooperado(a)"},
+{"Recursos": "ANDRE DA SILVA RODRIGUES", "Sistema(s)":"Protheus", "Vinculo": "Cooperado(a)"},
+{"Recursos": "ANDRÉ JUHEI HYODO", "Sistema(s)":"Protheus", "Vinculo": "Cooperado(a)"},
+{"Recursos": "ANDRESSA AREM", "Sistema(s)":"Fluig", "Vinculo": "Cooperado(a)"},
+{"Recursos": "ANDREZA SUELEM DUARTE ROCHA", "Sistema(s)":"Protheus", "Vinculo": "Cooperado(a)"},
+{"Recursos": "AUGUSTO CESAR FERREIRA DE MEIRELLES", "Sistema(s)":"Protheus", "Vinculo": "Cooperado(a)"},
+{"Recursos": "CAMILA THAMIRES MARTINS DE SOUZA", "Sistema(s)":"Protheus", "Vinculo": "CLT"},
+{"Recursos": "CARLOS ALBERTO LOPES DA SILVA", "Sistema(s)":"Protheus", "Vinculo": "Cooperado(a)"},
+{"Recursos": "CÉSAR AUGUSTO BRANDÃO", "Sistema(s)":"Protheus", "Vinculo": "Cooperado(a)"},
+{"Recursos": "CLAITON ANDRADE", "Sistema(s)":"Protheus", "Vinculo": "Cooperado(a)"},
+{"Recursos": "CLEBER CINTRA BARBOSA", "Sistema(s)":"Protheus", "Vinculo": "PJ"},
+{"Recursos": "CRISTIAN EDUARDO HIDALGO CERDA", "Sistema(s)":"Protheus", "Vinculo": "Cooperado(a)"},
+{"Recursos": "DANIELA CANHAMEIRO", "Sistema(s)":"Fluig", "Vinculo": "Cooperado(a)"},
+{"Recursos": "DAVID DE OLIVEIRA SOBRINHO", "Sistema(s)":"Protheus", "Vinculo": "PJ"},
+{"Recursos": "DJALMA BORGES NETO", "Sistema(s)":"Protheus", "Vinculo": "PJ"},
+{"Recursos": "DOUGLAS GONÇALVES DE SOUZA", "Sistema(s)":"Fluig", "Vinculo": "Cooperado(a)"},
+{"Recursos": "EDUARDO BERTAIA", "Sistema(s)":"Fluig", "Vinculo": "Cooperado(a)"},
+{"Recursos": "EDUARDO CIDRON SÁNCHEZ CIDRÓN", "Sistema(s)":"Protheus", "Vinculo": "PJ"},
+{"Recursos": "ELIVELTON DE OLIVEIRA CANEDO", "Sistema(s)":"Protheus", "Vinculo": "CLT"},
+{"Recursos": "EMILY SILVA DE SOUZA", "Sistema(s)":"Fluig", "Vinculo": "CLT"},
+{"Recursos": "EVALDO VAGNER BATISTA", "Sistema(s)":"Protheus", "Vinculo": "PJ"},
+{"Recursos": "FÁBIO VERALDI ALVES", "Sistema(s)":"Protheus", "Vinculo": "Cooperado(a)"},
+{"Recursos": "FELIPE DOS ANJOS DENTELLO", "Sistema(s)":"Protheus", "Vinculo": "Cooperado(a)"},
+{"Recursos": "FERNANDA AMORIM SILVA", "Sistema(s)":"Protheus", "Vinculo": "CLT"},
+{"Recursos": "FERNANDO EUGENIO DA SILVA", "Sistema(s)":"Protheus", "Vinculo": "PJ"},
+{"Recursos": "FERNANDO LOURENÇONI BARRETO ALMEIDA", "Sistema(s)":"Protheus", "Vinculo": "PJ"},
+{"Recursos": "GABRIEL ALVES DE SOUZA", "Sistema(s)":"Fluig", "Vinculo": "CLT"},
+{"Recursos": "GABRIEL DE SOUSA SANTOS", "Sistema(s)":"Fluig", "Vinculo": "Cooperado(a)"},
+{"Recursos": "GERSON APARECIDO DE JESUS BELINI", "Sistema(s)":"Protheus", "Vinculo": "PJ"},
+{"Recursos": "GIOVANNA ANICETO POPOLILE", "Sistema(s)":"Protheus", "Vinculo": "Cooperado(a)"},
+{"Recursos": "GIOVANNI FERNANDES DE SOUZA", "Sistema(s)":"Fluig", "Vinculo": "Cooperado(a)"},
+{"Recursos": "GISELE BRANDÃO GENUINO", "Sistema(s)":"Protheus", "Vinculo": "Cooperado(a)"},
+{"Recursos": "GUILHERME AUGUSTO DE LIMA SILVA", "Sistema(s)":"Protheus", "Vinculo": "PJ"},
+{"Recursos": "HENRIQUE GARCIA  DE SOUZA", "Sistema(s)":"Protheus", "Vinculo": "CLT"},
+{"Recursos": "HEVERSON CARLOS GOMES DE ARAUJO", "Sistema(s)":"Protheus", "Vinculo": "Cooperado(a)"},
+{"Recursos": "ISRAEL VITAL MACHADO", "Sistema(s)":"Protheus", "Vinculo": "CLT"},
+{"Recursos": "JANAÍNA GOMES DOS REIS", "Sistema(s)":"Protheus", "Vinculo": "Cooperado(a)"},
+{"Recursos": "JEAN INÁCIO SILVA", "Sistema(s)":"Rm", "Vinculo": "Cooperado(a)"},
+{"Recursos": "JOAO PAULO PIRES", "Sistema(s)":"Rm", "Vinculo": "CLT"},
+{"Recursos": "JOÃO VITOR PLAZA", "Sistema(s)":"Protheus", "Vinculo": "CLT"},
+{"Recursos": "JOSÉ ROBERTO DA SILVA", "Sistema(s)":"Protheus", "Vinculo": "Cooperado(a)"},
+{"Recursos": "JUAREZ CARVALHO DE LIMA", "Sistema(s)":"Protheus", "Vinculo": "Cooperado(a)"},
+{"Recursos": "JUAREZ DO NASCIMENTO CORDEIRO", "Sistema(s)":"Protheus", "Vinculo": "PJ"},
+{"Recursos": "KAREN CRISTHINE COELHO", "Sistema(s)":"Rm", "Vinculo": "Cooperado(a)"},
+{"Recursos": "KARINA OLIVEIRA DE LIRA BARBOSA DE MOURA", "Sistema(s)":"Protheus", "Vinculo": "PJ"},
+{"Recursos": "LARISSA DA SILVA LIMA", "Sistema(s)":"Protheus", "Vinculo": "Cooperado(a)"},
+{"Recursos": "LARISSA MARCOS CAMPAGNA", "Sistema(s)":"Fluig", "Vinculo": "PJ"},
+{"Recursos": "LEANDRO DOS ANJOS DENTELLO", "Sistema(s)":"Protheus", "Vinculo": "CLT"},
+{"Recursos": "LEONARDO CLEMENTE CEZAR", "Sistema(s)":"Protheus", "Vinculo": "Cooperado(a)"},
+{"Recursos": "LEONARDO MACEDO DOS SANTOS", "Sistema(s)":"Protheus", "Vinculo": "Cooperado(a)"},
+{"Recursos": "LIARA CRUZ BONIFACIO", "Sistema(s)":"Protheus", "Vinculo": "Cooperado(a)"},
+{"Recursos": "LUCAS MENDONÇA DE SOUZA GONÇALVES", "Sistema(s)":"Protheus", "Vinculo": "Cooperado(a)"},
+{"Recursos": "LUCIANO MARABINI MARINS", "Sistema(s)":"Protheus", "Vinculo": "Cooperado(a)"},
+{"Recursos": "LUIZ EDUARDO BRITO GOMES", "Sistema(s)":"Protheus", "Vinculo": "CLT"},
+{"Recursos": "LUIZ GUSTAVO RIBEIRO DE OLIVEIRA", "Sistema(s)":"Fluig", "Vinculo": "Cooperado(a)"},
+{"Recursos": "LUIZ NATALINO LOLO", "Sistema(s)":"Protheus", "Vinculo": "Cooperado(a)"},
+{"Recursos": "MARCOS GEORGE MARICATO", "Sistema(s)":"Protheus", "Vinculo": "PJ"},
+{"Recursos": "MARIANA DA SILVA BORGES ARAUJO", "Sistema(s)":"Protheus", "Vinculo": "PJ"},
+{"Recursos": "MATHEUS ALVES DA SILVA", "Sistema(s)":"Protheus", "Vinculo": "CLT"},
+{"Recursos": "MATHEUS FERNANDES DA SILVA", "Sistema(s)":"Fluig", "Vinculo": "Cooperado(a)"},
+{"Recursos": "MURILO MENDONÇA TAVARES", "Sistema(s)":"Protheus", "Vinculo": "PJ"},
+{"Recursos": "MYCHEL NATAL", "Sistema(s)":"Protheus", "Vinculo": "PJ"},
+{"Recursos": "NORBERTO M DE MELO", "Sistema(s)":"Protheus", "Vinculo": "Cooperado(a)"},
+{"Recursos": "PAULA DE CASSIA VALERIO CONTI", "Sistema(s)":"Protheus", "Vinculo": "PJ"},
+{"Recursos": "PAULO VILAS BOAS", "Sistema(s)":"Protheus", "Vinculo": "Cooperado(a)"},
+{"Recursos": "PEDRO HENRIQUE DA SILVA FAVA", "Sistema(s)":"Rm", "Vinculo": "CLT"},
+{"Recursos": "PEDRO IVO LEONEL BARBOSA", "Sistema(s)":"Fluig", "Vinculo": "PJ"},
+{"Recursos": "RAFAEL DOMINGUES DE OLIVEIRA", "Sistema(s)":"Protheus", "Vinculo": "PJ"},
+{"Recursos": "RAFAEL GOMES DO AMARAL", "Sistema(s)":"Protheus", "Vinculo": "Cooperado(a)"},
+{"Recursos": "RAFAEL TURRINI CEGANTINI", "Sistema(s)":"Protheus", "Vinculo": "Cooperado(a)"},
+{"Recursos": "RAFAEL VICTORIO BEZERRA", "Sistema(s)":"Protheus", "Vinculo": "CLT"},
+{"Recursos": "RENAN GONÇALVES", "Sistema(s)":"Fluig", "Vinculo": "PJ"},
+{"Recursos": "RENATO FREIRE JUNIOR", "Sistema(s)":"Fluig", "Vinculo": "Cooperado(a)"},
+{"Recursos": "RODOLFO FERREIRA DA SILVA", "Sistema(s)":"Rm", "Vinculo": "Cooperado(a)"},
+{"Recursos": "ROLANDO PINTO DOS SANTOS JUNIOR LINDBERG", "Sistema(s)":"Protheus", "Vinculo": "PJ"},
+{"Recursos": "ROSELI LEANDRO DO PRADO", "Sistema(s)":"Protheus", "Vinculo": "PJ"},
+{"Recursos": "SAMUEL RENAN", "Sistema(s)":"Rm", "Vinculo": "CLT"},
+{"Recursos": "SERGIO NORIO KANASHIRO", "Sistema(s)":"Protheus", "Vinculo": "Cooperado(a)"},
+{"Recursos": "STANKO ZLATKOVIC C. DE MIRANDA", "Sistema(s)":"Protheus", "Vinculo": "PJ"},
+{"Recursos": "TADEU ROBES", "Sistema(s)":"Protheus", "Vinculo": "PJ"},
+{"Recursos": "TATIANA ABRANCHES", "Sistema(s)":"Protheus", "Vinculo": "Cooperado(a)"},
+{"Recursos": "TATIANA MAIA LUSITANO", "Sistema(s)":"Protheus", "Vinculo": "PJ"},
+{"Recursos": "THAIS DIAS GOES", "Sistema(s)":"Protheus", "Vinculo": "Cooperado(a)"},
+{"Recursos": "THALYS AUGUSTO", "Sistema(s)":"Protheus", "Vinculo": "Cooperado(a)"},
+{"Recursos": "THIAGO GIDZINSKI FERNANDES ", "Sistema(s)":"Fluig", "Vinculo": "PJ"},
+{"Recursos": "VALDIRENE MAGALHÃES PINHEIRO", "Sistema(s)":"Protheus", "Vinculo": "Cooperado(a)"},
+{"Recursos": "VANDERLEI PIASSE", "Sistema(s)":"Fluig", "Vinculo": "Cooperado(a)"},
+{"Recursos": "VICTOR GUILHERME ALVES", "Sistema(s)":"Protheus", "Vinculo": "Cooperado(a)"},
+{"Recursos": "VINÍCIUS DAVI CHWALENSKY", "Sistema(s)":"Protheus", "Vinculo": "PJ"},
+{"Recursos": "VINICIUS TEIXEIRA VENÂNCIO DA CUNHA", "Sistema(s)":"Protheus", "Vinculo": "Cooperado(a)"},
+{"Recursos": "VITOR EDUARDO DE JESUS", "Sistema(s)":"Protheus", "Vinculo": "Cooperado(a)"},
+{"Recursos": "WALBER SOBRINHO MENEZES", "Sistema(s)":"Protheus", "Vinculo": "Cooperado(a)"},
+{"Recursos": "WALLACE RODRIGUES", "Sistema(s)":"Protheus", "Vinculo": "Cooperado(a)"},
+{"Recursos": "WESLEY ADELAIDE ROSA", "Sistema(s)":"Protheus", "Vinculo": "Cooperado(a)"},
+{"Recursos": "YURI MILAN PORTO", "Sistema(s)":"Protheus", "Vinculo": "PJ"},
+{"Recursos": "YURI ROMAN", "Sistema(s)":"Protheus", "Vinculo": "Cooperado(a)"}
+]
+
+
+
+//código das 3 colunas form cad recurso
+var constraints = [];
+constraints.push(DatasetFactory.createConstraint('metadata#active', true, true, ConstraintType.MUST));
+
+var fields = [
+    "nmCadRecurso",
+    "sobreNmCadRecurso",
+    "nomeParticular",
+    "tpContratacao",
+    "tpSistFluig",
+    "tpSistJava",
+    "tpSistProtheus",
+    "tpSistRm"
+];
+
+var ds = DatasetFactory.getDataset('dsFormCadRecurso', fields, constraints, null);
+
+if (ds && ds.values) {
+    var newFieldNames = {
+        "nmCadRecurso": "Nome",
+        "sobreNmCadRecurso": "Sobrenome",
+        "nomeParticular": "NomeCompleto",
+        "tpContratacao": "Vinculo",
+        "tpSistFluig": "FLUIG",
+        "tpSistJava": "JAVA",
+        "tpSistProtheus": "PROTHEUS",
+        "tpSistRm": "RM"
+    };
+
+    // Mapear valores de vínculo para suas representações desejadas
+    var vinculoMap = {
+        'pj': 'PJ',
+        'coop': 'Cooperado(a)',
+        'clt': 'CLT'
+    };
+
+    // Função para normalizar e remover caracteres acentuados repetidos
+    function normalizeString(str) {
+        if (!str) return '';
+        return str.normalize("NFD") // Decompor os caracteres acentuados
+            .replace(/[\u0300-\u036f]/g, "") // Remover acentos
+            .trim() // Remover espaços em branco no início e no fim
+            .toLowerCase(); // Convertendo para minúsculas
+    }
+
+    var filteredValues = ds.values.map(function(record) {
+        var newRecord = {};
+
+        // Usar um Set para garantir que não haja repetições de palavras
+        var uniqueWords = new Set();
+
+        // Processar e limpar os campos antes de adicionar ao Set
+        if (record["nmCadRecurso"]) {
+            normalizeString(record["nmCadRecurso"]).split(" ").forEach(word => uniqueWords.add(word));
+        }
+        if (record["sobreNmCadRecurso"]) {
+            normalizeString(record["sobreNmCadRecurso"]).split(" ").forEach(word => uniqueWords.add(word));
+        }
+        if (record["nomeParticular"]) {
+            normalizeString(record["nomeParticular"]).split(" ").forEach(word => uniqueWords.add(word));
+        }
+
+        // Recriar a string com palavras únicas e formatar a string
+        var recursos = Array.from(uniqueWords).join(" ");
+        newRecord["Recursos"] = recursos.split(' ').map(word => {
+            return word.charAt(0).toUpperCase() + word.slice(1);
+        }).join(' ').toUpperCase(); // Converter para maiúsculas
+
+        // Consolidar os sistemas em uma única chave "Sistema(s)"
+        var sistemas = [];
+        if (record["tpSistFluig"] === "on") sistemas.push("FLUIG");
+        if (record["tpSistJava"] === "on") sistemas.push("JAVA");
+        if (record["tpSistProtheus"] === "on") sistemas.push("PROTHEUS");
+        if (record["tpSistRm"] === "on") sistemas.push("RM");
+
+        newRecord["Sistema(s)"] = sistemas.join(", ");
+
+        // Copiar e renomear outras chaves desejadas, removendo as chaves específicas
+        fields.forEach(function(field) {
+            if (record.hasOwnProperty(field) && !["nmCadRecurso", "sobreNmCadRecurso", "nomeParticular", "tpSistFluig", "tpSistJava", "tpSistProtheus", "tpSistRm"].includes(field)) {
+                var newFieldName = newFieldNames[field];
+                var fieldValue = record[field];
+                if (field === "tpContratacao" && vinculoMap[fieldValue]) {
+                    newRecord[newFieldName] = vinculoMap[fieldValue];
+                } else {
+                    newRecord[newFieldName] = fieldValue;
+                }
+            }
+        });
+
+        return newRecord;
+    });
+
+    // Ordenar o array filtrado alfabeticamente pelo campo "Recursos"
+    filteredValues.sort(function(a, b) {
+        var nameA = a.Recursos ? a.Recursos.toUpperCase() : ""; // Ignorar maiúsculas e minúsculas
+        var nameB = b.Recursos ? b.Recursos.toUpperCase() : ""; // Ignorar maiúsculas e minúsculas
+        
+        if (nameA < nameB) {
+            return -1;
+        }
+        if (nameA > nameB) {
+            return 1;
+        }
+        return 0;
+    });
+
+    console.log(filteredValues);
+} else {
+    console.log('Erro ao obter o dataset. Dataset:', ds);
 }
+//fazer a mesma coisa com a matriz de capacitacao
