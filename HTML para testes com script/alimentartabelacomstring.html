@@ -1,0 +1,79 @@
+<!--<div class="panel-body">
+    <table tablename="tableConvi" class="table">
+        <thead>
+            <tr>
+                <td><label for="nome">Nome</label></td>
+                <td><label for="email">Email</label></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="text" class="form-control" name="nomeconvidad"></td>
+                <td><input type="text" class="form-control" name="emailconvidad"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Alimentar Tabela com JavaScript</title>
+    </head>
+
+    <body>
+
+        <table id="tabela">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Os dados serão inseridos aqui via JavaScript -->
+            </tbody>
+        </table>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // Strings pré-estabelecidas de nome e email
+                var nomes = ['Luiz', 'Márcio'];
+                var emails = ['luiz.gomes@totvs.com.br', 'marcio@totvs.com.br'];
+
+                // Obtém a referência da tabela
+                var tabela = document.getElementById("tabela").getElementsByTagName('tbody')[0];
+
+                // Loop através dos dados e cria as linhas da tabela
+                for (var i = 0; i < nomes.length; i++) {
+                    // Cria uma nova linha na tabela
+                    var newRow = tabela.insertRow(tabela.rows.length);
+
+                    // Insere os dados nas células da linha
+                    var cell1 = newRow.insertCell(0);
+                    var cell2 = newRow.insertCell(1);
+                    cell1.innerHTML = nomes[i];
+                    cell2.innerHTML = emails[i];
+                }
+            });
+        </script>
+
+    </body>
+
+    </html>
+
+</body>
+
+</html>

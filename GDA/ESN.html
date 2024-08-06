@@ -1,0 +1,355 @@
+<html>
+
+<head>
+    <style>
+        .file-input-wrapper {
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .file-input-wrapper input[type=file],
+        .file-input-wrapper input[type=file]:focus,
+        .file-input-wrapper input[type=file]:hover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            cursor: pointer;
+            opacity: 0;
+            filter: alpha(opacity=0);
+            z-index: 99;
+            outline: 0;
+        }
+
+        .file-input-name {
+            margin-left: 8px;
+        }
+    </style>
+    <link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css">
+    <script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+    <script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+    <script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+    <script>
+        $(document).ready(function () {
+            $("button[onclick^=wdkAddChild]").hide();
+        });
+    </script>
+
+    <script type="text/javascript" src="/webdesk/vcXMLRPC.js"></script>
+    <style>
+        .inputescondido {
+            display: none;
+        }
+    </style>
+
+    <script src="/ecm_resources/resources/assets/forms/forms.js?v=1.8.1-231211"></script>
+    <link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css?v=1.8.1-231211">
+</head>
+
+<body>
+    <div class="fluig-style-guide">
+        <form enctype="" role="form" method="post" name="form" action="" onsubmit="return false;">
+            <h2>Cadastro de Consultores</h2>
+            <span class="inputescondido" name="agoraagoraagora">&nbsp;</span>
+            <table class="table table-hover" id="agoravaimano" tablename="agoravaimano"
+                addbuttonlabel="Adicionar Pessoa">
+                <thead>
+                    <tr>
+                        <th><label>Nome</label></th>
+                        <th><label>E-mail</label></th>
+                        <th><label>Unidade</label></th>
+                        <th><label>Segmentos</label></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="display:none" detail="true" detailname="agoravaimano">
+                        <td><span id="nome" class="form-control" name="nome">&nbsp;</span></td>
+                        <td><span id="email" class="form-control" name="email">&nbsp;</span></td>
+                        <td><span id="unidade" class="form-control" name="unidade">&nbsp;</span></td>
+                        <td><span id="seg" class="form-control" name="seg">&nbsp;</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="nome___1" class="form-control" name="nome___1">Fredson Correia</span></td>
+                        <td><span id="email___1" class="form-control"
+                                name="email___1">fredson.correia@totvs.com.br</span></td>
+                        <td><span id="unidade___1" class="form-control" name="unidade___1">TSUL</span></td>
+                        <td><span id="seg___1" class="form-control" name="seg___1">Agro</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="nome___2" class="form-control" name="nome___2">Fredson Correia</span></td>
+                        <td><span id="email___2" class="form-control"
+                                name="email___2">fredson.correia@totvs.com.br</span></td>
+                        <td><span id="unidade___2" class="form-control" name="unidade___2">TSUL</span></td>
+                        <td><span id="seg___2" class="form-control" name="seg___2">Manufatura</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="nome___3" class="form-control" name="nome___3">Marystella Almeida</span></td>
+                        <td><span id="email___3" class="form-control"
+                                name="email___3">marystellaalmeida@totvs.com.br</span></td>
+                        <td><span id="unidade___3" class="form-control" name="unidade___3">TSM</span></td>
+                        <td><span id="seg___3" class="form-control" name="seg___3">Construção</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="nome___4" class="form-control" name="nome___4">Marystella Almeida</span></td>
+                        <td><span id="email___4" class="form-control"
+                                name="email___4">marystellaalmeida@totvs.com.br</span></td>
+                        <td><span id="unidade___4" class="form-control" name="unidade___4">TSM</span></td>
+                        <td><span id="seg___4" class="form-control" name="seg___4">Educacional</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="nome___5" class="form-control" name="nome___5">Marystella Almeida</span></td>
+                        <td><span id="email___5" class="form-control"
+                                name="email___5">marystellaalmeida@totvs.com.br</span></td>
+                        <td><span id="unidade___5" class="form-control" name="unidade___5">TSM</span></td>
+                        <td><span id="seg___5" class="form-control" name="seg___5">Manufatura</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="nome___6" class="form-control" name="nome___6">Bruna Bolognami</span></td>
+                        <td><span id="email___6" class="form-control"
+                                name="email___6">bruna.bolognami@totvs.com.br</span></td>
+                        <td><span id="unidade___6" class="form-control" name="unidade___6">TVale</span></td>
+                        <td><span id="seg___6" class="form-control" name="seg___6">Construção</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="nome___7" class="form-control" name="nome___7">Bruna Bolognami</span></td>
+                        <td><span id="email___7" class="form-control"
+                                name="email___7">bruna.bolognami@totvs.com.br</span></td>
+                        <td><span id="unidade___7" class="form-control" name="unidade___7">TVale</span></td>
+                        <td><span id="seg___7" class="form-control" name="seg___7">Educacional</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="nome___8" class="form-control" name="nome___8">Bruna Bolognami</span></td>
+                        <td><span id="email___8" class="form-control"
+                                name="email___8">bruna.bolognami@totvs.com.br</span></td>
+                        <td><span id="unidade___8" class="form-control" name="unidade___8">TVale</span></td>
+                        <td><span id="seg___8" class="form-control" name="seg___8">Manufatura</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="nome___9" class="form-control" name="nome___9">Bruna Bolognami</span></td>
+                        <td><span id="email___9" class="form-control"
+                                name="email___9">bruna.bolognami@totvs.com.br</span></td>
+                        <td><span id="unidade___9" class="form-control" name="unidade___9">TVale</span></td>
+                        <td><span id="seg___9" class="form-control" name="seg___9">Serviços</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="nome___10" class="form-control" name="nome___10">Mateus Alves</span></td>
+                        <td><span id="email___10" class="form-control" name="email___10">mateusalves@totvs.com.br</span>
+                        </td>
+                        <td><span id="unidade___10" class="form-control" name="unidade___10">TSul</span></td>
+                        <td><span id="seg___10" class="form-control" name="seg___10">Construção</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="nome___11" class="form-control" name="nome___11">Mateus Alves</span></td>
+                        <td><span id="email___11" class="form-control" name="email___11">mateusalves@totvs.com.br</span>
+                        </td>
+                        <td><span id="unidade___11" class="form-control" name="unidade___11">TSul</span></td>
+                        <td><span id="seg___11" class="form-control" name="seg___11">Distribuição</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="nome___12" class="form-control" name="nome___12">Mateus Alves</span></td>
+                        <td><span id="email___12" class="form-control" name="email___12">mateusalves@totvs.com.br</span>
+                        </td>
+                        <td><span id="unidade___12" class="form-control" name="unidade___12">TSul</span></td>
+                        <td><span id="seg___12" class="form-control" name="seg___12">Educacional</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="nome___13" class="form-control" name="nome___13">Mateus Alves</span></td>
+                        <td><span id="email___13" class="form-control" name="email___13">mateusalves@totvs.com.br</span>
+                        </td>
+                        <td><span id="unidade___13" class="form-control" name="unidade___13">TSul</span></td>
+                        <td><span id="seg___13" class="form-control" name="seg___13">Logística</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="nome___14" class="form-control" name="nome___14">Mateus Alves</span></td>
+                        <td><span id="email___14" class="form-control" name="email___14">mateusalves@totvs.com.br</span>
+                        </td>
+                        <td><span id="unidade___14" class="form-control" name="unidade___14">TSul</span></td>
+                        <td><span id="seg___14" class="form-control" name="seg___14">Manufatura</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="nome___15" class="form-control" name="nome___15">Mateus Alves</span></td>
+                        <td><span id="email___15" class="form-control" name="email___15">mateusalves@totvs.com.br</span>
+                        </td>
+                        <td><span id="unidade___15" class="form-control" name="unidade___15">TSul</span></td>
+                        <td><span id="seg___15" class="form-control" name="seg___15">Serviços</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="nome___16" class="form-control" name="nome___16">Mateus Alves</span></td>
+                        <td><span id="email___16" class="form-control" name="email___16">mateusalves@totvs.com.br</span>
+                        </td>
+                        <td><span id="unidade___16" class="form-control" name="unidade___16">TSul</span></td>
+                        <td><span id="seg___16" class="form-control" name="seg___16">Varejo</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="nome___17" class="form-control" name="nome___17">Marcus Cotrim</span></td>
+                        <td><span id="email___17" class="form-control"
+                                name="email___17">marcuscotrim@totvs.com.br</span></td>
+                        <td><span id="unidade___17" class="form-control" name="unidade___17">TSM</span></td>
+                        <td><span id="seg___17" class="form-control" name="seg___17">Distribuição</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="nome___18" class="form-control" name="nome___18">Marcus Cotrim</span></td>
+                        <td><span id="email___18" class="form-control"
+                                name="email___18">marcuscotrim@totvs.com.br</span></td>
+                        <td><span id="unidade___18" class="form-control" name="unidade___18">TSM</span></td>
+                        <td><span id="seg___18" class="form-control" name="seg___18">Logísitica</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="nome___19" class="form-control" name="nome___19">Marcus Cotrim</span></td>
+                        <td><span id="email___19" class="form-control"
+                                name="email___19">marcuscotrim@totvs.com.br</span></td>
+                        <td><span id="unidade___19" class="form-control" name="unidade___19">TSM</span></td>
+                        <td><span id="seg___19" class="form-control" name="seg___19">Manufatura</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="nome___20" class="form-control" name="nome___20">Diego Bolognami</span></td>
+                        <td><span id="email___20" class="form-control"
+                                name="email___20">diegobolognami@totvs.com.br</span></td>
+                        <td><span id="unidade___20" class="form-control" name="unidade___20">TVALE</span></td>
+                        <td><span id="seg___20" class="form-control" name="seg___20">Distribuição</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="nome___21" class="form-control" name="nome___21">Diego Bolognami</span></td>
+                        <td><span id="email___21" class="form-control"
+                                name="email___21">diegobolognami@totvs.com.br</span></td>
+                        <td><span id="unidade___21" class="form-control" name="unidade___21">TVALE</span></td>
+                        <td><span id="seg___21" class="form-control" name="seg___21">Logística</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="nome___22" class="form-control" name="nome___22">Diego Bolognami</span></td>
+                        <td><span id="email___22" class="form-control"
+                                name="email___22">diegobolognami@totvs.com.br</span></td>
+                        <td><span id="unidade___22" class="form-control" name="unidade___22">TVALE</span></td>
+                        <td><span id="seg___22" class="form-control" name="seg___22">Manufatura</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="nome___23" class="form-control" name="nome___23">Diego Bolognami</span></td>
+                        <td><span id="email___23" class="form-control"
+                                name="email___23">diegobolognami@totvs.com.br</span></td>
+                        <td><span id="unidade___23" class="form-control" name="unidade___23">TVALE</span></td>
+                        <td><span id="seg___23" class="form-control" name="seg___23">Varejo</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="nome___24" class="form-control" name="nome___24">Marcelo Alves</span></td>
+                        <td><span id="email___24" class="form-control"
+                                name="email___24">marceloalves@totvs.com.br</span></td>
+                        <td><span id="unidade___24" class="form-control" name="unidade___24">TSM</span></td>
+                        <td><span id="seg___24" class="form-control" name="seg___24">Manufatura</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="nome___25" class="form-control" name="nome___25">Marcelo Alves</span></td>
+                        <td><span id="email___25" class="form-control"
+                                name="email___25">marceloalves@totvs.com.br</span></td>
+                        <td><span id="unidade___25" class="form-control" name="unidade___25">TSM</span></td>
+                        <td><span id="seg___25" class="form-control" name="seg___25">Varejo</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="nome___26" class="form-control" name="nome___26">tableItems</span></td>
+                        <td><span id="email___26" class="form-control" name="email___26">&nbsp;</span></td>
+                        <td><span id="unidade___26" class="form-control" name="unidade___26">&nbsp;</span></td>
+                        <td><span id="seg___26" class="form-control" name="seg___26">&nbsp;</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+
+    </div>
+
+    <script type="text/template" class="ecm-zoom-results">
+<ul id="ecm-zoom-results-message" class="tt-suggestions list-unstyled">
+<li class="tip-message ellipsis fs-color-danger">Serão exibidos os primeiros 300 registros, comece a digitar para visualizar os demais itens.</li>
+</ul>
+</script>
+    <script type="text/javascript">
+        if (window.FLUIGC && FLUIGC.utilities.checkBrowser().isIe()) {
+            function focusInput() {
+                var i;
+                var inputFields = document.getElementsByTagName('input');
+                if (inputFields.length) {
+                    for (i = 0; i < inputFields.length; i++) {
+                        if (inputFields[i].type == 'text') {
+                            inputFields[i].focus();
+                            break;
+                        }
+                    }
+                }
+                else {
+                    var textAreaFields = document.getElementsByTagName('textarea');
+                    for (i = 0; i < textAreaFields.length; i++) {
+                        if (textAreaFields.length) {
+                            textAreaFields[i].focus();
+                            break;
+                        }
+                    }
+                }
+            };
+            window.addEventListener('load', focusInput);
+        }</script>
+    <script type="text/javascript">
+        function dateFormat() {
+            var i;
+            var inputFields = document.getElementsByTagName('input');
+            var is_chrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
+            if (is_chrome) {
+                if (inputFields.length) {
+                    for (i = 0; i < inputFields.length; i++) {
+                        if (inputFields[i].type == 'date') {
+                            var match = inputFields[i].defaultValue.match('^[0-3]?[0-9]/[0-3]?[0-9]/(?:[0-9]{2})?[0-9]{2}$');
+                            if (match) {
+                                var split = match[0].split('/');
+                                inputFields[i].defaultValue = split[2] + '-' + split[1] + '-' + split[0];
+                            }
+                        }
+                    }
+                }
+            }
+        };
+        window.addEventListener('load', dateFormat);</script>
+
+    <script src="/ecm_resources/resources/assets/forms/wdkdetail.js?v=1.8.1-231211"></script>
+    <script>WdksetNewId('{"agoravaimano":26}');</script>
+    <script>
+        function printWebDeskFrame() {
+            document.getElementById('printBt').style.display = 'none';
+            setButtonWebdeskState('none');
+            print();
+            setButtonWebdeskState('inline');
+            document.getElementById('printBt').style.display = 'inline';
+        }
+        function setButtonWebdeskState(state) {
+            var forms = document.forms;
+            var images = document.images;
+            for (var i = 0; i < images.length; i++) {
+                var src = images[i].src;
+                var compare = 'webdesk/assets/icons/';
+                if (src.indexOf(compare) > -1) {
+                    images[i].style.display = state;
+                }
+            }
+            for (i = 0; i < forms.length; i++) {
+                if (forms[i] != null) {
+                    var elements = forms[i].elements;
+                    for (z = 0; z < elements.length; z++) {
+                        if (elements[z] != null) {
+                            if (elements[z].type == "button") {
+                                elements[z].style.display = state;
+                            }
+                            if (elements[z].type == "submit") {
+                                elements[z].style.display = state;
+                            }
+                            if (elements[z].type == "image") {
+                                elements[z].style.display = state;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <div class="fluig-style-guide"> <button class="btn btn-default" type="button"
+            onclick="javascript: printWebDeskFrame();" id="printBt">Imprimir</button> </div>
+</body>
+
+</html>

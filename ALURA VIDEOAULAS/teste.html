@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela com Paginação</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+        }
+    </style>
+    <script src="javascript.js"></script>
+</head>
+<body>
+    <h1>Tabela com array chumbado</h1>
+    <table id="tabela">
+        <thead>
+            <tr>
+                <th>Coluna 1</th>
+                <th>Coluna 2</th>
+                <th>Coluna 3</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <div>
+        <button id="anterior">Anterior</button>
+        <button id="proximo">Próximo</button>
+    </div>
+    <h1>Tabela com array</h1>
+    <div id="table-container">
+        <table id="tbDadosMIT">
+            <!-- Conteúdo gerado dinamicamente -->
+        </table>
+        <div id="pagination">
+            <button id="prev" onclick="previousPage()">Anterior</button>
+            <button id="next" onclick="nextPage()">Próximo</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,1013 @@
+<html>
+
+<head>
+    <style>
+        .file-input-wrapper {
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .file-input-wrapper input[type=file],
+        .file-input-wrapper input[type=file]:focus,
+        .file-input-wrapper input[type=file]:hover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            cursor: pointer;
+            opacity: 0;
+            filter: alpha(opacity=0);
+            z-index: 99;
+            outline: 0;
+        }
+
+        .file-input-name {
+            margin-left: 8px;
+        }
+    </style>
+    <link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css">
+    <script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+    <script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+    <script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+    <script>
+        $(document).ready(function () {
+            $("button[onclick^=wdkAddChild]").hide();
+        });
+    </script>
+
+    <script type="text/javascript" src="/webdesk/vcXMLRPC.js"></script>
+
+    <script src="/ecm_resources/resources/assets/forms/forms.js?v=1.8.1-231211"></script>
+    <link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css?v=1.8.1-231211">
+</head>
+
+<body>
+    <div class="fluig-style-guide">
+        <form enctype="" role="form" method="post" name="form" action="" onsubmit="return false;">
+            <h2>Cadastro de Pessoas</h2>
+            <span id="vazio" class="form-control" name="vazio">&nbsp;</span>
+            <table class="table table-hover" id="tablearq" tablename="tablearq" addbuttonlabel="Adicionar Pessoa">
+                <thead>
+                    <tr>
+                        <th><label>Categoria do Sistema</label></th>
+                        <th><label>Sub Categoria</label></th>
+                        <th><label>ARQ</label></th>
+                        <th><label>E-mail</label></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="display:none" detail="true" detailname="tablearq">
+                        <td><span id="ctgs" class="form-control" name="ctgs">&nbsp;</span></td>
+                        <td><span id="sctgs" class="form-control" name="sctgs">&nbsp;</span></td>
+                        <td><span id="arq" class="form-control" name="arq">&nbsp;</span></td>
+                        <td><span id="email" class="form-control" name="email">&nbsp;</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___1" class="form-control" name="ctgs___1">APPS</span></td>
+                        <td><span id="sctgs___1" class="form-control" name="sctgs___1">MEU PROTHEUS</span></td>
+                        <td><span id="arq___1" class="form-control" name="arq___1">-</span></td>
+                        <td><span id="email___1" class="form-control" name="email___1">-</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___2" class="form-control" name="ctgs___2">APPS</span></td>
+                        <td><span id="sctgs___2" class="form-control" name="sctgs___2">MEU COLETOR</span></td>
+                        <td><span id="arq___2" class="form-control" name="arq___2">André Nunes</span></td>
+                        <td><span id="email___2" class="form-control" name="email___2">andrenunes@totvs.com.br</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___3" class="form-control" name="ctgs___3">APPS</span></td>
+                        <td><span id="sctgs___3" class="form-control" name="sctgs___3">MEUS CONTRATOS</span></td>
+                        <td><span id="arq___3" class="form-control" name="arq___3">André Nunes</span></td>
+                        <td><span id="email___3" class="form-control" name="email___3">andrenunes@totvs.com.br</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___4" class="form-control" name="ctgs___4">APPS</span></td>
+                        <td><span id="sctgs___4" class="form-control" name="sctgs___4">MEUS CONTRATOS</span></td>
+                        <td><span id="arq___4" class="form-control" name="arq___4">Giselle Kushima</span></td>
+                        <td><span id="email___4" class="form-control" name="email___4">giselekushima@totvs.com.br</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___5" class="form-control" name="ctgs___5">APPS</span></td>
+                        <td><span id="sctgs___5" class="form-control" name="sctgs___5">MINHA PRODUÇÃO</span></td>
+                        <td><span id="arq___5" class="form-control" name="arq___5">André Nunes</span></td>
+                        <td><span id="email___5" class="form-control" name="email___5">andrenunes@totvs.com.br</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___6" class="form-control" name="ctgs___6">APPS</span></td>
+                        <td><span id="sctgs___6" class="form-control" name="sctgs___6">MINHA PRODUÇÃO</span></td>
+                        <td><span id="arq___6" class="form-control" name="arq___6">Giselle Kushima</span></td>
+                        <td><span id="email___6" class="form-control" name="email___6">giselekushima@totvs.com.br</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___7" class="form-control" name="ctgs___7">APPS</span></td>
+                        <td><span id="sctgs___7" class="form-control" name="sctgs___7">MINHAS ORDENS DE SERVIÇO</span>
+                        </td>
+                        <td><span id="arq___7" class="form-control" name="arq___7">André Nunes</span></td>
+                        <td><span id="email___7" class="form-control" name="email___7">andrenunes@totvs.com.br</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___8" class="form-control" name="ctgs___8">APPS</span></td>
+                        <td><span id="sctgs___8" class="form-control" name="sctgs___8">MINHAS ORDENS DE SERVIÇO</span>
+                        </td>
+                        <td><span id="arq___8" class="form-control" name="arq___8">Giselle Kushima</span></td>
+                        <td><span id="email___8" class="form-control" name="email___8">giselekushima@totvs.com.br</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___9" class="form-control" name="ctgs___9">APPS</span></td>
+                        <td><span id="sctgs___9" class="form-control" name="sctgs___9">MOBSALES(APP DE VENDAS)</span>
+                        </td>
+                        <td><span id="arq___9" class="form-control" name="arq___9">-</span></td>
+                        <td><span id="email___9" class="form-control" name="email___9">-</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___10" class="form-control" name="ctgs___10">AUTOMAÇÃO COMERCIAL</span></td>
+                        <td><span id="sctgs___10" class="form-control" name="sctgs___10">CONTROLE DE
+                                LOJA(SIGALOJA)</span></td>
+                        <td><span id="arq___10" class="form-control" name="arq___10">André Nunes</span></td>
+                        <td><span id="email___10" class="form-control" name="email___10">andrenunes@totvs.com.br</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___11" class="form-control" name="ctgs___11">AUTOMAÇÃO COMERCIAL</span></td>
+                        <td><span id="sctgs___11" class="form-control" name="sctgs___11">CONTROLE DE
+                                LOJA(SIGALOJA)</span></td>
+                        <td><span id="arq___11" class="form-control" name="arq___11">Giselle Kushima</span></td>
+                        <td><span id="email___11" class="form-control"
+                                name="email___11">giselekushima@totvs.com.br</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___12" class="form-control" name="ctgs___12">AUTOMAÇÃO COMERCIAL</span></td>
+                        <td><span id="sctgs___12" class="form-control" name="sctgs___12">FIDELIZAÇÃO E ANALISE DE
+                                CREDITO</span></td>
+                        <td><span id="arq___12" class="form-control" name="arq___12">-</span></td>
+                        <td><span id="email___12" class="form-control" name="email___12">-</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___13" class="form-control" name="ctgs___13">AUTOMAÇÃO COMERCIAL</span></td>
+                        <td><span id="sctgs___13" class="form-control" name="sctgs___13">FRONT LOJA( FLI)</span></td>
+                        <td><span id="arq___13" class="form-control" name="arq___13">André Nunes</span></td>
+                        <td><span id="email___13" class="form-control" name="email___13">andrenunes@totvs.com.br</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___14" class="form-control" name="ctgs___14">COMÉRCIO EXTERIOR</span></td>
+                        <td><span id="sctgs___14" class="form-control" name="sctgs___14">CONTABILIDADE DE
+                                IMPORTAÇÕES</span></td>
+                        <td><span id="arq___14" class="form-control" name="arq___14">-</span></td>
+                        <td><span id="email___14" class="form-control" name="email___14">-</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___15" class="form-control" name="ctgs___15">COMÉRCIO EXTERIOR</span></td>
+                        <td><span id="sctgs___15" class="form-control" name="sctgs___15">DRAWBACK</span></td>
+                        <td><span id="arq___15" class="form-control" name="arq___15">-</span></td>
+                        <td><span id="email___15" class="form-control" name="email___15">-</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___16" class="form-control" name="ctgs___16">COMÉRCIO EXTERIOR</span></td>
+                        <td><span id="sctgs___16" class="form-control" name="sctgs___16">EXPORTAÇÃO</span></td>
+                        <td><span id="arq___16" class="form-control" name="arq___16">Giselle Kushima</span></td>
+                        <td><span id="email___16" class="form-control"
+                                name="email___16">giselekushima@totvs.com.br</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___17" class="form-control" name="ctgs___17">COMÉRCIO EXTERIOR</span></td>
+                        <td><span id="sctgs___17" class="form-control" name="sctgs___17">FINANCIAMENTO DE
+                                IMPORTAÇÃO</span></td>
+                        <td><span id="arq___17" class="form-control" name="arq___17">-</span></td>
+                        <td><span id="email___17" class="form-control" name="email___17">-</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___18" class="form-control" name="ctgs___18">COMÉRCIO EXTERIOR</span></td>
+                        <td><span id="sctgs___18" class="form-control" name="sctgs___18">IMPORTAÇÃO</span></td>
+                        <td><span id="arq___18" class="form-control" name="arq___18">Giselle Kushima</span></td>
+                        <td><span id="email___18" class="form-control"
+                                name="email___18">giselekushima@totvs.com.br</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___19" class="form-control" name="ctgs___19">CONCESSIONÁRIAS</span></td>
+                        <td><span id="sctgs___19" class="form-control" name="sctgs___19">OFICCINAS</span></td>
+                        <td><span id="arq___19" class="form-control" name="arq___19">-</span></td>
+                        <td><span id="email___19" class="form-control" name="email___19">-</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___20" class="form-control" name="ctgs___20">CONCESSIONÁRIAS</span></td>
+                        <td><span id="sctgs___20" class="form-control" name="sctgs___20">PEÇAS</span></td>
+                        <td><span id="arq___20" class="form-control" name="arq___20">-</span></td>
+                        <td><span id="email___20" class="form-control" name="email___20">-</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___21" class="form-control" name="ctgs___21">CONCESSIONÁRIAS</span></td>
+                        <td><span id="sctgs___21" class="form-control" name="sctgs___21">VEÍCULOS</span></td>
+                        <td><span id="arq___21" class="form-control" name="arq___21">-</span></td>
+                        <td><span id="email___21" class="form-control" name="email___21">-</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___22" class="form-control" name="ctgs___22">CONTROLADORIA</span></td>
+                        <td><span id="sctgs___22" class="form-control" name="sctgs___22">CONTÁBIL/FISCAL &gt; ATIVO
+                                FIXO</span></td>
+                        <td><span id="arq___22" class="form-control" name="arq___22">André Nunes</span></td>
+                        <td><span id="email___22" class="form-control" name="email___22">andrenunes@totvs.com.br</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___23" class="form-control" name="ctgs___23">CONTROLADORIA</span></td>
+                        <td><span id="sctgs___23" class="form-control" name="sctgs___23">CONTÁBIL/FISCAL &gt; ATIVO
+                                FIXO</span></td>
+                        <td><span id="arq___23" class="form-control" name="arq___23">Paulo Elias</span></td>
+                        <td><span id="email___23" class="form-control" name="email___23">pauloelias@totvs.com.br</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___24" class="form-control" name="ctgs___24">CONTROLADORIA</span></td>
+                        <td><span id="sctgs___24" class="form-control" name="sctgs___24">CONTÁBIL/FISCAL &gt;
+                                CONTABILIDADE GERENCIAL</span></td>
+                        <td><span id="arq___24" class="form-control" name="arq___24">André Nunes</span></td>
+                        <td><span id="email___24" class="form-control" name="email___24">andrenunes@totvs.com.br</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___25" class="form-control" name="ctgs___25">CONTROLADORIA</span></td>
+                        <td><span id="sctgs___25" class="form-control" name="sctgs___25">CONTÁBIL/FISCAL &gt;
+                                CONTABILIDADE GERENCIAL</span></td>
+                        <td><span id="arq___25" class="form-control" name="arq___25">Paulo Elias</span></td>
+                        <td><span id="email___25" class="form-control" name="email___25">pauloelias@totvs.com.br</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___26" class="form-control" name="ctgs___26">CONTROLADORIA</span></td>
+                        <td><span id="sctgs___26" class="form-control" name="sctgs___26">CONTÁBIL/FISCAL &gt; FISCAL
+                                (LIVROS FISCAIS)</span></td>
+                        <td><span id="arq___26" class="form-control" name="arq___26">André Nunes</span></td>
+                        <td><span id="email___26" class="form-control" name="email___26">andrenunes@totvs.com.br</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___27" class="form-control" name="ctgs___27">CONTROLADORIA</span></td>
+                        <td><span id="sctgs___27" class="form-control" name="sctgs___27">CONTÁBIL/FISCAL &gt; FISCAL
+                                (LIVROS FISCAIS)</span></td>
+                        <td><span id="arq___27" class="form-control" name="arq___27">Paulo Elias</span></td>
+                        <td><span id="email___27" class="form-control" name="email___27">pauloelias@totvs.com.br</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___28" class="form-control" name="ctgs___28">CONTROLADORIA</span></td>
+                        <td><span id="sctgs___28" class="form-control" name="sctgs___28">CONTÁBIL/FISCAL &gt;
+                                PLANEJAMENTO E CONTROLE ORÇAMENTO</span></td>
+                        <td><span id="arq___28" class="form-control" name="arq___28">Giselle Kushima</span></td>
+                        <td><span id="email___28" class="form-control"
+                                name="email___28">gisellekushima@totvs.com.br</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___29" class="form-control" name="ctgs___29">CONTROLADORIA</span></td>
+                        <td><span id="sctgs___29" class="form-control" name="sctgs___29">FINANCEIRO &gt; CNAB</span>
+                        </td>
+                        <td><span id="arq___29" class="form-control" name="arq___29">André Nunes</span></td>
+                        <td><span id="email___29" class="form-control" name="email___29">andrenunes@totvs.com.br</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___30" class="form-control" name="ctgs___30">CONTROLADORIA</span></td>
+                        <td><span id="sctgs___30" class="form-control" name="sctgs___30">FINANCEIRO &gt; CNAB</span>
+                        </td>
+                        <td><span id="arq___30" class="form-control" name="arq___30">Giselle Kushima</span></td>
+                        <td><span id="email___30" class="form-control"
+                                name="email___30">gisellekushima@totvs.com.br</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___31" class="form-control" name="ctgs___31">CONTROLADORIA</span></td>
+                        <td><span id="sctgs___31" class="form-control" name="sctgs___31">FINANCEIRO &gt; CNAB</span>
+                        </td>
+                        <td><span id="arq___31" class="form-control" name="arq___31">Paulo Elias</span></td>
+                        <td><span id="email___31" class="form-control" name="email___31">pauloelias@totvs.com.br</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___32" class="form-control" name="ctgs___32">CONTROLADORIA</span></td>
+                        <td><span id="sctgs___32" class="form-control" name="sctgs___32">FINANCEIRO &gt; CONTAS A
+                                PAGAR</span></td>
+                        <td><span id="arq___32" class="form-control" name="arq___32">André Nunes</span></td>
+                        <td><span id="email___32" class="form-control" name="email___32">andrenunes@totvs.com.br</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___33" class="form-control" name="ctgs___33">CONTROLADORIA</span></td>
+                        <td><span id="sctgs___33" class="form-control" name="sctgs___33">FINANCEIRO &gt; CONTAS A
+                                PAGAR</span></td>
+                        <td><span id="arq___33" class="form-control" name="arq___33">Giselle Kushima</span></td>
+                        <td><span id="email___33" class="form-control"
+                                name="email___33">gisellekushima@totvs.com.br</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___34" class="form-control" name="ctgs___34">CONTROLADORIA</span></td>
+                        <td><span id="sctgs___34" class="form-control" name="sctgs___34">FINANCEIRO &gt; CONTAS A
+                                PAGAR</span></td>
+                        <td><span id="arq___34" class="form-control" name="arq___34">Paulo Elias</span></td>
+                        <td><span id="email___34" class="form-control" name="email___34">pauloelias@totvs.com.br</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___35" class="form-control" name="ctgs___35">CONTROLADORIA</span></td>
+                        <td><span id="sctgs___35" class="form-control" name="sctgs___35">FINANCEIRO &gt; CONTAS A
+                                RECEBER</span></td>
+                        <td><span id="arq___35" class="form-control" name="arq___35">André Nunes</span></td>
+                        <td><span id="email___35" class="form-control" name="email___35">andrenunes@totvs.com.br</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___36" class="form-control" name="ctgs___36">CONTROLADORIA</span></td>
+                        <td><span id="sctgs___36" class="form-control" name="sctgs___36">FINANCEIRO &gt; CONTAS A
+                                RECEBER</span></td>
+                        <td><span id="arq___36" class="form-control" name="arq___36">Giselle Kushima</span></td>
+                        <td><span id="email___36" class="form-control"
+                                name="email___36">gisellekushima@totvs.com.br</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___37" class="form-control" name="ctgs___37">CONTROLADORIA</span></td>
+                        <td><span id="sctgs___37" class="form-control" name="sctgs___37">FINANCEIRO &gt; CONTAS A
+                                RECEBER</span></td>
+                        <td><span id="arq___37" class="form-control" name="arq___37">Paulo Elias</span></td>
+                        <td><span id="email___37" class="form-control" name="email___37">pauloelias@totvs.com.br</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___38" class="form-control" name="ctgs___38">CONTROLADORIA</span></td>
+                        <td><span id="sctgs___38" class="form-control" name="sctgs___38">FINANCEIRO &gt; MOVIMENTAÇÃO
+                                BANCÁRIA</span></td>
+                        <td><span id="arq___38" class="form-control" name="arq___38">André Nunes</span></td>
+                        <td><span id="email___38" class="form-control" name="email___38">andrenunes@totvs.com.br</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___39" class="form-control" name="ctgs___39">CONTROLADORIA</span></td>
+                        <td><span id="sctgs___39" class="form-control" name="sctgs___39">FINANCEIRO &gt; MOVIMENTAÇÃO
+                                BANCÁRIA</span></td>
+                        <td><span id="arq___39" class="form-control" name="arq___39">Giselle Kushima</span></td>
+                        <td><span id="email___39" class="form-control"
+                                name="email___39">gisellekushima@totvs.com.br</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___40" class="form-control" name="ctgs___40">CONTROLADORIA</span></td>
+                        <td><span id="sctgs___40" class="form-control" name="sctgs___40">FINANCEIRO &gt; MOVIMENTAÇÃO
+                                BANCÁRIA</span></td>
+                        <td><span id="arq___40" class="form-control" name="arq___40">Paulo Elias</span></td>
+                        <td><span id="email___40" class="form-control" name="email___40">pauloelias@totvs.com.br</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___41" class="form-control" name="ctgs___41">CONTROLADORIA</span></td>
+                        <td><span id="sctgs___41" class="form-control" name="sctgs___41">SPED CONTABIL</span></td>
+                        <td><span id="arq___41" class="form-control" name="arq___41">André Nunes</span></td>
+                        <td><span id="email___41" class="form-control" name="email___41">andrenunes@totvs.com.br</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___42" class="form-control" name="ctgs___42">CONTROLADORIA</span></td>
+                        <td><span id="sctgs___42" class="form-control" name="sctgs___42">SPED CONTABIL</span></td>
+                        <td><span id="arq___42" class="form-control" name="arq___42">Paulo Elias</span></td>
+                        <td><span id="email___42" class="form-control" name="email___42">pauloelias@totvs.com.br</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___43" class="form-control" name="ctgs___43">CONTROLADORIA</span></td>
+                        <td><span id="sctgs___43" class="form-control" name="sctgs___43">SPED NF-E</span></td>
+                        <td><span id="arq___43" class="form-control" name="arq___43">André Nunes</span></td>
+                        <td><span id="email___43" class="form-control" name="email___43">andrenunes@totvs.com.br</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___44" class="form-control" name="ctgs___44">CONTROLADORIA</span></td>
+                        <td><span id="sctgs___44" class="form-control" name="sctgs___44">SPED NF-E</span></td>
+                        <td><span id="arq___44" class="form-control" name="arq___44">Paulo Elias</span></td>
+                        <td><span id="email___44" class="form-control" name="email___44">pauloelias@totvs.com.br</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___45" class="form-control" name="ctgs___45">CRM</span></td>
+                        <td><span id="sctgs___45" class="form-control" name="sctgs___45">CRM PROTHEUS(TMK,CRM)</span>
+                        </td>
+                        <td><span id="arq___45" class="form-control" name="arq___45">Giselle Kushima</span></td>
+                        <td><span id="email___45" class="form-control"
+                                name="email___45">gisellekushima@totvs.com.br</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___46" class="form-control" name="ctgs___46">CRM</span></td>
+                        <td><span id="sctgs___46" class="form-control" name="sctgs___46">CRM PROTHEUS(TMK,CRM)</span>
+                        </td>
+                        <td><span id="arq___46" class="form-control" name="arq___46">Paulo Elias</span></td>
+                        <td><span id="email___46" class="form-control" name="email___46">pauloelias@totvs.com.br</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___47" class="form-control" name="ctgs___47">CRM</span></td>
+                        <td><span id="sctgs___47" class="form-control" name="sctgs___47">MASTER CRM</span></td>
+                        <td><span id="arq___47" class="form-control" name="arq___47">-</span></td>
+                        <td><span id="email___47" class="form-control" name="email___47">-</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___48" class="form-control" name="ctgs___48">CRM</span></td>
+                        <td><span id="sctgs___48" class="form-control" name="sctgs___48">MASTER SALES</span></td>
+                        <td><span id="arq___48" class="form-control" name="arq___48">-</span></td>
+                        <td><span id="email___48" class="form-control" name="email___48">-</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___49" class="form-control" name="ctgs___49">DIST. E LOGISTICA</span></td>
+                        <td><span id="sctgs___49" class="form-control" name="sctgs___49">GESTÃO DE
+                                ARMAZENAGEM-WMS</span></td>
+                        <td><span id="arq___49" class="form-control" name="arq___49">-</span></td>
+                        <td><span id="email___49" class="form-control" name="email___49">-</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___50" class="form-control" name="ctgs___50">DIST. E LOGISTICA</span></td>
+                        <td><span id="sctgs___50" class="form-control" name="sctgs___50">GESTÃO DE
+                                DISTRIBUIÇÃO-OMS</span></td>
+                        <td><span id="arq___50" class="form-control" name="arq___50">André Nunes</span></td>
+                        <td><span id="email___50" class="form-control" name="email___50">andrenunes@totvs.com.br</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___51" class="form-control" name="ctgs___51">DIST. E LOGISTICA</span></td>
+                        <td><span id="sctgs___51" class="form-control" name="sctgs___51">GESTÃO DE
+                                DISTRIBUIÇÃO-OMS</span></td>
+                        <td><span id="arq___51" class="form-control" name="arq___51">Paulo Elias</span></td>
+                        <td><span id="email___51" class="form-control" name="email___51">pauloelias@totvs.com.br</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___52" class="form-control" name="ctgs___52">DIST. E LOGISTICA</span></td>
+                        <td><span id="sctgs___52" class="form-control" name="sctgs___52">GESTÃO DE EMBARCADOR-GFE</span>
+                        </td>
+                        <td><span id="arq___52" class="form-control" name="arq___52">-</span></td>
+                        <td><span id="email___52" class="form-control" name="email___52">-</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___53" class="form-control" name="ctgs___53">DIST. E LOGISTICA</span></td>
+                        <td><span id="sctgs___53" class="form-control" name="sctgs___53">GESTÃO DE TRANSPORTE-TMS</span>
+                        </td>
+                        <td><span id="arq___53" class="form-control" name="arq___53">Giselle Kushima</span></td>
+                        <td><span id="email___53" class="form-control"
+                                name="email___53">gisellekushima@totvs.com.br</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___54" class="form-control" name="ctgs___54">EDUCACIONAL</span></td>
+                        <td><span id="sctgs___54" class="form-control" name="sctgs___54">GESTÃO ACERVOS</span></td>
+                        <td><span id="arq___54" class="form-control" name="arq___54">-</span></td>
+                        <td><span id="email___54" class="form-control" name="email___54">-</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___55" class="form-control" name="ctgs___55">EDUCACIONAL</span></td>
+                        <td><span id="sctgs___55" class="form-control" name="sctgs___55">GESTÃO EDUCACIONAL</span></td>
+                        <td><span id="arq___55" class="form-control" name="arq___55">-</span></td>
+                        <td><span id="email___55" class="form-control" name="email___55">-</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___56" class="form-control" name="ctgs___56">FLUIG</span></td>
+                        <td><span id="sctgs___56" class="form-control" name="sctgs___56">ANALYTICS</span></td>
+                        <td><span id="arq___56" class="form-control" name="arq___56">André Nunes</span></td>
+                        <td><span id="email___56" class="form-control" name="email___56">andrenunes@totvs.com.br</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___57" class="form-control" name="ctgs___57">FLUIG</span></td>
+                        <td><span id="sctgs___57" class="form-control" name="sctgs___57">ANALYTICS</span></td>
+                        <td><span id="arq___57" class="form-control" name="arq___57">Giselle Kushima</span></td>
+                        <td><span id="email___57" class="form-control"
+                                name="email___57">gisellekushima@totvs.com.br</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___58" class="form-control" name="ctgs___58">FLUIG</span></td>
+                        <td><span id="sctgs___58" class="form-control" name="sctgs___58">BPM</span></td>
+                        <td><span id="arq___58" class="form-control" name="arq___58">André Nunes</span></td>
+                        <td><span id="email___58" class="form-control" name="email___58">andrenunes@totvs.com.br</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___59" class="form-control" name="ctgs___59">FLUIG</span></td>
+                        <td><span id="sctgs___59" class="form-control" name="sctgs___59">GED</span></td>
+                        <td><span id="arq___59" class="form-control" name="arq___59">André Nunes</span></td>
+                        <td><span id="email___59" class="form-control" name="email___59">andrenunes@totvs.com.br</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___60" class="form-control" name="ctgs___60">FLUIG</span></td>
+                        <td><span id="sctgs___60" class="form-control" name="sctgs___60">GED</span></td>
+                        <td><span id="arq___60" class="form-control" name="arq___60">Giselle Kushima</span></td>
+                        <td><span id="email___60" class="form-control"
+                                name="email___60">gisellekushima@totvs.com.br</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___61" class="form-control" name="ctgs___61">FLUIG</span></td>
+                        <td><span id="sctgs___61" class="form-control" name="sctgs___61">LEARNING</span></td>
+                        <td><span id="arq___61" class="form-control" name="arq___61">-</span></td>
+                        <td><span id="email___61" class="form-control" name="email___61">-</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___62" class="form-control" name="ctgs___62">FLUIG</span></td>
+                        <td><span id="sctgs___62" class="form-control" name="sctgs___62">WCM</span></td>
+                        <td><span id="arq___62" class="form-control" name="arq___62">André Nunes</span></td>
+                        <td><span id="email___62" class="form-control" name="email___62">andrenunes@totvs.com.br</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___63" class="form-control" name="ctgs___63">FLUIG</span></td>
+                        <td><span id="sctgs___63" class="form-control" name="sctgs___63">WCM</span></td>
+                        <td><span id="arq___63" class="form-control" name="arq___63">Giselle Kushima</span></td>
+                        <td><span id="email___63" class="form-control"
+                                name="email___63">gisellekushima@totvs.com.br</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___64" class="form-control" name="ctgs___64">MANUFATURA</span></td>
+                        <td><span id="sctgs___64" class="form-control" name="sctgs___64">APS</span></td>
+                        <td><span id="arq___64" class="form-control" name="arq___64">-</span></td>
+                        <td><span id="email___64" class="form-control" name="email___64">undefined</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___65" class="form-control" name="ctgs___65">MANUFATURA</span></td>
+                        <td><span id="sctgs___65" class="form-control" name="sctgs___65">CHÃO DE FÁBRICA</span></td>
+                        <td><span id="arq___65" class="form-control" name="arq___65">-</span></td>
+                        <td><span id="email___65" class="form-control" name="email___65">-</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___66" class="form-control" name="ctgs___66">MANUFATURA</span></td>
+                        <td><span id="sctgs___66" class="form-control" name="sctgs___66">CONFIG. DE PRODUTOS</span></td>
+                        <td><span id="arq___66" class="form-control" name="arq___66">Giselle Kushima</span></td>
+                        <td><span id="email___66" class="form-control"
+                                name="email___66">gisellekushima@totvs.com.br</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___67" class="form-control" name="ctgs___67">MANUFATURA</span></td>
+                        <td><span id="sctgs___67" class="form-control" name="sctgs___67">CONFIG. DE PRODUTOS</span></td>
+                        <td><span id="arq___67" class="form-control" name="arq___67">Paulo Elias</span></td>
+                        <td><span id="email___67" class="form-control" name="email___67">pauloelias@totvs.com.br</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___68" class="form-control" name="ctgs___68">MANUFATURA</span></td>
+                        <td><span id="sctgs___68" class="form-control" name="sctgs___68">DESENVOLVEDOR DE
+                                PRODUTOS</span></td>
+                        <td><span id="arq___68" class="form-control" name="arq___68">-</span></td>
+                        <td><span id="email___68" class="form-control" name="email___68">-</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___69" class="form-control" name="ctgs___69">MANUFATURA</span></td>
+                        <td><span id="sctgs___69" class="form-control" name="sctgs___69">TOTVS M.E.S.</span></td>
+                        <td><span id="arq___69" class="form-control" name="arq___69">-</span></td>
+                        <td><span id="email___69" class="form-control" name="email___69">-</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___70" class="form-control" name="ctgs___70">MATERIAIS E PRODUÇÃO</span></td>
+                        <td><span id="sctgs___70" class="form-control" name="sctgs___70">COMPRAS</span></td>
+                        <td><span id="arq___70" class="form-control" name="arq___70">André Nunes</span></td>
+                        <td><span id="email___70" class="form-control" name="email___70">andrenunes@totvs.com.br</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___71" class="form-control" name="ctgs___71">MATERIAIS E PRODUÇÃO</span></td>
+                        <td><span id="sctgs___71" class="form-control" name="sctgs___71">COMPRAS</span></td>
+                        <td><span id="arq___71" class="form-control" name="arq___71">Giselle Kushima</span></td>
+                        <td><span id="email___71" class="form-control"
+                                name="email___71">gisellekushima@totvs.com.br</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___72" class="form-control" name="ctgs___72">MATERIAIS E PRODUÇÃO</span></td>
+                        <td><span id="sctgs___72" class="form-control" name="sctgs___72">COMPRAS</span></td>
+                        <td><span id="arq___72" class="form-control" name="arq___72">Paulo Elias</span></td>
+                        <td><span id="email___72" class="form-control" name="email___72">pauloelias@totvs.com.br</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___73" class="form-control" name="ctgs___73">MATERIAIS E PRODUÇÃO</span></td>
+                        <td><span id="sctgs___73" class="form-control" name="sctgs___73">CONTROLE DE CUSTOS</span></td>
+                        <td><span id="arq___73" class="form-control" name="arq___73">André Nunes</span></td>
+                        <td><span id="email___73" class="form-control" name="email___73">andrenunes@totvs.com.br</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___74" class="form-control" name="ctgs___74">MATERIAIS E PRODUÇÃO</span></td>
+                        <td><span id="sctgs___74" class="form-control" name="sctgs___74">CONTROLE DE CUSTOS</span></td>
+                        <td><span id="arq___74" class="form-control" name="arq___74">Giselle Kushima</span></td>
+                        <td><span id="email___74" class="form-control"
+                                name="email___74">gisellekushima@totvs.com.br</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___75" class="form-control" name="ctgs___75">MATERIAIS E PRODUÇÃO</span></td>
+                        <td><span id="sctgs___75" class="form-control" name="sctgs___75">CONTROLE DE CUSTOS</span></td>
+                        <td><span id="arq___75" class="form-control" name="arq___75">Paulo Elias</span></td>
+                        <td><span id="email___75" class="form-control" name="email___75">pauloelias@totvs.com.br</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___76" class="form-control" name="ctgs___76">MATERIAIS E PRODUÇÃO</span></td>
+                        <td><span id="sctgs___76" class="form-control" name="sctgs___76">CONTROLE DE PRODUÇÃO</span>
+                        </td>
+                        <td><span id="arq___76" class="form-control" name="arq___76">André Nunes</span></td>
+                        <td><span id="email___76" class="form-control" name="email___76">andrenunes@totvs.com.br</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___77" class="form-control" name="ctgs___77">MATERIAIS E PRODUÇÃO</span></td>
+                        <td><span id="sctgs___77" class="form-control" name="sctgs___77">CONTROLE DE PRODUÇÃO</span>
+                        </td>
+                        <td><span id="arq___77" class="form-control" name="arq___77">Giselle Kushima</span></td>
+                        <td><span id="email___77" class="form-control"
+                                name="email___77">gisellekushima@totvs.com.br</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___78" class="form-control" name="ctgs___78">MATERIAIS E PRODUÇÃO</span></td>
+                        <td><span id="sctgs___78" class="form-control" name="sctgs___78">CONTROLE DE PRODUÇÃO</span>
+                        </td>
+                        <td><span id="arq___78" class="form-control" name="arq___78">Paulo Elias</span></td>
+                        <td><span id="email___78" class="form-control" name="email___78">pauloelias@totvs.com.br</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___79" class="form-control" name="ctgs___79">MATERIAIS E PRODUÇÃO</span></td>
+                        <td><span id="sctgs___79" class="form-control" name="sctgs___79">ESTOQUE/CUSTOS</span></td>
+                        <td><span id="arq___79" class="form-control" name="arq___79">André Nunes</span></td>
+                        <td><span id="email___79" class="form-control" name="email___79">andrenunes@totvs.com.br</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___80" class="form-control" name="ctgs___80">MATERIAIS E PRODUÇÃO</span></td>
+                        <td><span id="sctgs___80" class="form-control" name="sctgs___80">ESTOQUE/CUSTOS</span></td>
+                        <td><span id="arq___80" class="form-control" name="arq___80">Giselle Kushima</span></td>
+                        <td><span id="email___80" class="form-control"
+                                name="email___80">gisellekushima@totvs.com.br</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___81" class="form-control" name="ctgs___81">MATERIAIS E PRODUÇÃO</span></td>
+                        <td><span id="sctgs___81" class="form-control" name="sctgs___81">ESTOQUE/CUSTOS</span></td>
+                        <td><span id="arq___81" class="form-control" name="arq___81">Paulo Elias</span></td>
+                        <td><span id="email___81" class="form-control" name="email___81">pauloelias@totvs.com.br</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___82" class="form-control" name="ctgs___82">MATERIAIS E PRODUÇÃO</span></td>
+                        <td><span id="sctgs___82" class="form-control" name="sctgs___82">FATURAMENTO</span></td>
+                        <td><span id="arq___82" class="form-control" name="arq___82">André Nunes</span></td>
+                        <td><span id="email___82" class="form-control" name="email___82">andrenunes@totvs.com.br</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___83" class="form-control" name="ctgs___83">MATERIAIS E PRODUÇÃO</span></td>
+                        <td><span id="sctgs___83" class="form-control" name="sctgs___83">FATURAMENTO</span></td>
+                        <td><span id="arq___83" class="form-control" name="arq___83">Giselle Kushima</span></td>
+                        <td><span id="email___83" class="form-control"
+                                name="email___83">gisellekushima@totvs.com.br</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___84" class="form-control" name="ctgs___84">MATERIAIS E PRODUÇÃO</span></td>
+                        <td><span id="sctgs___84" class="form-control" name="sctgs___84">FATURAMENTO</span></td>
+                        <td><span id="arq___84" class="form-control" name="arq___84">Paulo Elias</span></td>
+                        <td><span id="email___84" class="form-control" name="email___84">pauloelias@totvs.com.br</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___85" class="form-control" name="ctgs___85">MATERIAIS E PRODUÇÃO</span></td>
+                        <td><span id="sctgs___85" class="form-control" name="sctgs___85">GESTÃO AGRICOLA/GRÃOS</span>
+                        </td>
+                        <td><span id="arq___85" class="form-control" name="arq___85">-</span></td>
+                        <td><span id="email___85" class="form-control" name="email___85">-</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___86" class="form-control" name="ctgs___86">MATERIAIS E PRODUÇÃO</span></td>
+                        <td><span id="sctgs___86" class="form-control" name="sctgs___86">GESTÃO DE CONTRATOS</span></td>
+                        <td><span id="arq___86" class="form-control" name="arq___86">André Nunes</span></td>
+                        <td><span id="email___86" class="form-control" name="email___86">andrenunes@totvs.com.br</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___87" class="form-control" name="ctgs___87">MATERIAIS E PRODUÇÃO</span></td>
+                        <td><span id="sctgs___87" class="form-control" name="sctgs___87">GESTÃO DE CONTRATOS</span></td>
+                        <td><span id="arq___87" class="form-control" name="arq___87">Giselle Kushima</span></td>
+                        <td><span id="email___87" class="form-control"
+                                name="email___87">gisellekushima@totvs.com.br</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___88" class="form-control" name="ctgs___88">MATERIAIS E PRODUÇÃO</span></td>
+                        <td><span id="sctgs___88" class="form-control" name="sctgs___88">GESTÃO DE CONTRATOS</span></td>
+                        <td><span id="arq___88" class="form-control" name="arq___88">Paulo Elias</span></td>
+                        <td><span id="email___88" class="form-control" name="email___88">pauloelias@totvs.com.br</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___89" class="form-control" name="ctgs___89">MATERIAIS E PRODUÇÃO</span></td>
+                        <td><span id="sctgs___89" class="form-control" name="sctgs___89">MANUTENÇAÕ DE ATIVOS
+                                (MNT)</span></td>
+                        <td><span id="arq___89" class="form-control" name="arq___89">Giselle Kushima</span></td>
+                        <td><span id="email___89" class="form-control"
+                                name="email___89">gisellekushima@totvs.com.br</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___90" class="form-control" name="ctgs___90">MATERIAIS E PRODUÇÃO</span></td>
+                        <td><span id="sctgs___90" class="form-control" name="sctgs___90">MANUTENÇÃO DE FROTA</span></td>
+                        <td><span id="arq___90" class="form-control" name="arq___90">Giselle Kushima</span></td>
+                        <td><span id="email___90" class="form-control"
+                                name="email___90">gisellekushima@totvs.com.br</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___91" class="form-control" name="ctgs___91">MATERIAIS E PRODUÇÃO</span></td>
+                        <td><span id="sctgs___91" class="form-control" name="sctgs___91">PLANEJAMENTO E CONTROLE DE
+                                PRODUÇÃO -PCP</span></td>
+                        <td><span id="arq___91" class="form-control" name="arq___91">André Nunes</span></td>
+                        <td><span id="email___91" class="form-control" name="email___91">andrenunes@totvs.com.br</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___92" class="form-control" name="ctgs___92">MATERIAIS E PRODUÇÃO</span></td>
+                        <td><span id="sctgs___92" class="form-control" name="sctgs___92">PLANEJAMENTO E CONTROLE DE
+                                PRODUÇÃO -PCP</span></td>
+                        <td><span id="arq___92" class="form-control" name="arq___92">Giselle Kushima</span></td>
+                        <td><span id="email___92" class="form-control"
+                                name="email___92">gisellekushima@totvs.com.br</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___93" class="form-control" name="ctgs___93">MATERIAIS E PRODUÇÃO</span></td>
+                        <td><span id="sctgs___93" class="form-control" name="sctgs___93">PLANEJAMENTO E CONTROLE DE
+                                PRODUÇÃO -PCP</span></td>
+                        <td><span id="arq___93" class="form-control" name="arq___93">Paulo Elias</span></td>
+                        <td><span id="email___93" class="form-control" name="email___93">pauloelias@totvs.com.br</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___94" class="form-control" name="ctgs___94">PAINÉIS</span></td>
+                        <td><span id="sctgs___94" class="form-control" name="sctgs___94">CAROL PLATAFORMA</span></td>
+                        <td><span id="arq___94" class="form-control" name="arq___94">-</span></td>
+                        <td><span id="email___94" class="form-control" name="email___94">-</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___95" class="form-control" name="ctgs___95">PAINÉIS</span></td>
+                        <td><span id="sctgs___95" class="form-control" name="sctgs___95">PAINEL CONTABIL</span></td>
+                        <td><span id="arq___95" class="form-control" name="arq___95">-</span></td>
+                        <td><span id="email___95" class="form-control" name="email___95">-</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___96" class="form-control" name="ctgs___96">PAINÉIS</span></td>
+                        <td><span id="sctgs___96" class="form-control" name="sctgs___96">PAINEL FINANCEIRO</span></td>
+                        <td><span id="arq___96" class="form-control" name="arq___96">-</span></td>
+                        <td><span id="email___96" class="form-control" name="email___96">-</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___97" class="form-control" name="ctgs___97">RECURSOS HUMANOS</span></td>
+                        <td><span id="sctgs___97" class="form-control" name="sctgs___97">APP MEU R.H./CLOCK-IN</span>
+                        </td>
+                        <td><span id="arq___97" class="form-control" name="arq___97">André Nunes</span></td>
+                        <td><span id="email___97" class="form-control" name="email___97">andrenunes@totvs.com.br</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___98" class="form-control" name="ctgs___98">RECURSOS HUMANOS</span></td>
+                        <td><span id="sctgs___98" class="form-control" name="sctgs___98">APP MEU R.H./CLOCK-IN</span>
+                        </td>
+                        <td><span id="arq___98" class="form-control" name="arq___98">Giselle Kushima</span></td>
+                        <td><span id="email___98" class="form-control"
+                                name="email___98">gisellekushima@totvs.com.br</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___99" class="form-control" name="ctgs___99">RECURSOS HUMANOS</span></td>
+                        <td><span id="sctgs___99" class="form-control" name="sctgs___99">APP PERFORMANCE E METAS</span>
+                        </td>
+                        <td><span id="arq___99" class="form-control" name="arq___99">André Nunes</span></td>
+                        <td><span id="email___99" class="form-control" name="email___99">andrenunes@totvs.com.br</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___100" class="form-control" name="ctgs___100">RECURSOS HUMANOS</span></td>
+                        <td><span id="sctgs___100" class="form-control" name="sctgs___100">APP PERFORMANCE E
+                                METAS</span></td>
+                        <td><span id="arq___100" class="form-control" name="arq___100">Giselle Kushima</span></td>
+                        <td><span id="email___100" class="form-control"
+                                name="email___100">gisellekushima@totvs.com.br</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___101" class="form-control" name="ctgs___101">RECURSOS HUMANOS</span></td>
+                        <td><span id="sctgs___101" class="form-control" name="sctgs___101">AVALIAÇÃO E PESQUISA DE
+                                DESEMPENHO</span></td>
+                        <td><span id="arq___101" class="form-control" name="arq___101">André Nunes</span></td>
+                        <td><span id="email___101" class="form-control"
+                                name="email___101">andrenunes@totvs.com.br</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___102" class="form-control" name="ctgs___102">RECURSOS HUMANOS</span></td>
+                        <td><span id="sctgs___102" class="form-control" name="sctgs___102">AVALIAÇÃO E PESQUISA DE
+                                DESEMPENHO</span></td>
+                        <td><span id="arq___102" class="form-control" name="arq___102">Giselle Kushima</span></td>
+                        <td><span id="email___102" class="form-control"
+                                name="email___102">gisellekushima@totvs.com.br</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___103" class="form-control" name="ctgs___103">RECURSOS HUMANOS</span></td>
+                        <td><span id="sctgs___103" class="form-control" name="sctgs___103">CARGOS E SALARIOS</span></td>
+                        <td><span id="arq___103" class="form-control" name="arq___103">André Nunes</span></td>
+                        <td><span id="email___103" class="form-control"
+                                name="email___103">andrenunes@totvs.com.br</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___104" class="form-control" name="ctgs___104">RECURSOS HUMANOS</span></td>
+                        <td><span id="sctgs___104" class="form-control" name="sctgs___104">CARGOS E SALARIOS</span></td>
+                        <td><span id="arq___104" class="form-control" name="arq___104">Giselle Kushima</span></td>
+                        <td><span id="email___104" class="form-control"
+                                name="email___104">gisellekushima@totvs.com.br</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___105" class="form-control" name="ctgs___105">RECURSOS HUMANOS</span></td>
+                        <td><span id="sctgs___105" class="form-control" name="sctgs___105">GESTÃO PESSOAL</span></td>
+                        <td><span id="arq___105" class="form-control" name="arq___105">André Nunes</span></td>
+                        <td><span id="email___105" class="form-control"
+                                name="email___105">andrenunes@totvs.com.br</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___106" class="form-control" name="ctgs___106">RECURSOS HUMANOS</span></td>
+                        <td><span id="sctgs___106" class="form-control" name="sctgs___106">GESTÃO PESSOAL</span></td>
+                        <td><span id="arq___106" class="form-control" name="arq___106">Giselle Kushima</span></td>
+                        <td><span id="email___106" class="form-control"
+                                name="email___106">gisellekushima@totvs.com.br</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___107" class="form-control" name="ctgs___107">RECURSOS HUMANOS</span></td>
+                        <td><span id="sctgs___107" class="form-control" name="sctgs___107">PONTO ELETRONICO</span></td>
+                        <td><span id="arq___107" class="form-control" name="arq___107">André Nunes</span></td>
+                        <td><span id="email___107" class="form-control"
+                                name="email___107">andrenunes@totvs.com.br</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___108" class="form-control" name="ctgs___108">RECURSOS HUMANOS</span></td>
+                        <td><span id="sctgs___108" class="form-control" name="sctgs___108">PONTO ELETRONICO</span></td>
+                        <td><span id="arq___108" class="form-control" name="arq___108">Giselle Kushima</span></td>
+                        <td><span id="email___108" class="form-control"
+                                name="email___108">gisellekushima@totvs.com.br</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___109" class="form-control" name="ctgs___109">RECURSOS HUMANOS</span></td>
+                        <td><span id="sctgs___109" class="form-control" name="sctgs___109">PROCESSOS TRABALHISTAS</span>
+                        </td>
+                        <td><span id="arq___109" class="form-control" name="arq___109">André Nunes</span></td>
+                        <td><span id="email___109" class="form-control"
+                                name="email___109">andrenunes@totvs.com.br</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___110" class="form-control" name="ctgs___110">RECURSOS HUMANOS</span></td>
+                        <td><span id="sctgs___110" class="form-control" name="sctgs___110">PROCESSOS TRABALHISTAS</span>
+                        </td>
+                        <td><span id="arq___110" class="form-control" name="arq___110">Giselle Kushima</span></td>
+                        <td><span id="email___110" class="form-control"
+                                name="email___110">gisellekushima@totvs.com.br</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___111" class="form-control" name="ctgs___111">RECURSOS HUMANOS</span></td>
+                        <td><span id="sctgs___111" class="form-control" name="sctgs___111">RECRUTAMENTO E SELEÇÃO DE
+                                PESSOAL</span></td>
+                        <td><span id="arq___111" class="form-control" name="arq___111">André Nunes</span></td>
+                        <td><span id="email___111" class="form-control"
+                                name="email___111">andrenunes@totvs.com.br</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___112" class="form-control" name="ctgs___112">RECURSOS HUMANOS</span></td>
+                        <td><span id="sctgs___112" class="form-control" name="sctgs___112">RECRUTAMENTO E SELEÇÃO DE
+                                PESSOAL</span></td>
+                        <td><span id="arq___112" class="form-control" name="arq___112">Giselle Kushima</span></td>
+                        <td><span id="email___112" class="form-control"
+                                name="email___112">gisellekushima@totvs.com.br</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___113" class="form-control" name="ctgs___113">RECURSOS HUMANOS</span></td>
+                        <td><span id="sctgs___113" class="form-control" name="sctgs___113">TREINAMENTO</span></td>
+                        <td><span id="arq___113" class="form-control" name="arq___113">André Nunes</span></td>
+                        <td><span id="email___113" class="form-control"
+                                name="email___113">andrenunes@totvs.com.br</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___114" class="form-control" name="ctgs___114">RECURSOS HUMANOS</span></td>
+                        <td><span id="sctgs___114" class="form-control" name="sctgs___114">TREINAMENTO</span></td>
+                        <td><span id="arq___114" class="form-control" name="arq___114">Giselle Kushima</span></td>
+                        <td><span id="email___114" class="form-control"
+                                name="email___114">gisellekushima@totvs.com.br</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___115" class="form-control" name="ctgs___115">RENTAL</span></td>
+                        <td><span id="sctgs___115" class="form-control" name="sctgs___115">-</span></td>
+                        <td><span id="arq___115" class="form-control" name="arq___115">Luis Lolo</span></td>
+                        <td><span id="email___115" class="form-control" name="email___115">luislolo@gmail.com</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___116" class="form-control" name="ctgs___116">SAÚDE</span></td>
+                        <td><span id="sctgs___116" class="form-control" name="sctgs___116">GESTÃO HOSPITALAR</span></td>
+                        <td><span id="arq___116" class="form-control" name="arq___116">-</span></td>
+                        <td><span id="email___116" class="form-control" name="email___116">-</span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="ctgs___117" class="form-control" name="ctgs___117">SERVIÇOS</span></td>
+                        <td><span id="sctgs___117" class="form-control" name="sctgs___117">G.S. + LOCAÇÃO DE
+                                EQUIPAMENTOS</span></td>
+                        <td><span id="arq___117" class="form-control" name="arq___117">-</span></td>
+                        <td><span id="email___117" class="form-control" name="email___117">-</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+    <script type="text/template" class="ecm-zoom-results">
+<ul id="ecm-zoom-results-message" class="tt-suggestions list-unstyled">
+<li class="tip-message ellipsis fs-color-danger">Serão exibidos os primeiros 300 registros, comece a digitar para visualizar os demais itens.</li>
+</ul>
+</script>
+    <script type="text/javascript">
+        if (window.FLUIGC && FLUIGC.utilities.checkBrowser().isIe()) {
+            function focusInput() {
+                var i;
+                var inputFields = document.getElementsByTagName('input');
+                if (inputFields.length) {
+                    for (i = 0; i < inputFields.length; i++) {
+                        if (inputFields[i].type == 'text') {
+                            inputFields[i].focus();
+                            break;
+                        }
+                    }
+                }
+                else {
+                    var textAreaFields = document.getElementsByTagName('textarea');
+                    for (i = 0; i < textAreaFields.length; i++) {
+                        if (textAreaFields.length) {
+                            textAreaFields[i].focus();
+                            break;
+                        }
+                    }
+                }
+            };
+            window.addEventListener('load', focusInput);
+        }</script>
+    <script type="text/javascript">
+        function dateFormat() {
+            var i;
+            var inputFields = document.getElementsByTagName('input');
+            var is_chrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
+            if (is_chrome) {
+                if (inputFields.length) {
+                    for (i = 0; i < inputFields.length; i++) {
+                        if (inputFields[i].type == 'date') {
+                            var match = inputFields[i].defaultValue.match('^[0-3]?[0-9]/[0-3]?[0-9]/(?:[0-9]{2})?[0-9]{2}$');
+                            if (match) {
+                                var split = match[0].split('/');
+                                inputFields[i].defaultValue = split[2] + '-' + split[1] + '-' + split[0];
+                            }
+                        }
+                    }
+                }
+            }
+        };
+        window.addEventListener('load', dateFormat);</script>
+
+    <script src="/ecm_resources/resources/assets/forms/wdkdetail.js?v=1.8.1-231211"></script>
+    <script>WdksetNewId('{"tablearq":117}');</script>
+    <script>
+        function printWebDeskFrame() {
+            document.getElementById('printBt').style.display = 'none';
+            setButtonWebdeskState('none');
+            print();
+            setButtonWebdeskState('inline');
+            document.getElementById('printBt').style.display = 'inline';
+        }
+        function setButtonWebdeskState(state) {
+            var forms = document.forms;
+            var images = document.images;
+            for (var i = 0; i < images.length; i++) {
+                var src = images[i].src;
+                var compare = 'webdesk/assets/icons/';
+                if (src.indexOf(compare) > -1) {
+                    images[i].style.display = state;
+                }
+            }
+            for (i = 0; i < forms.length; i++) {
+                if (forms[i] != null) {
+                    var elements = forms[i].elements;
+                    for (z = 0; z < elements.length; z++) {
+                        if (elements[z] != null) {
+                            if (elements[z].type == "button") {
+                                elements[z].style.display = state;
+                            }
+                            if (elements[z].type == "submit") {
+                                elements[z].style.display = state;
+                            }
+                            if (elements[z].type == "image") {
+                                elements[z].style.display = state;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <div class="fluig-style-guide"> <button class="btn btn-default" type="button"
+            onclick="javascript: printWebDeskFrame();" id="printBt">Imprimir</button> </div>
+</body>
+
+</html>
