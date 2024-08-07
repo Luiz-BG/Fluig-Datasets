@@ -226,8 +226,6 @@
 {'nome':'YURI MILAN PORTO','vinculo':'PJ'},
 {'nome':'YURI ROMAN','vinculo':'Cooperado'}
  ]
- 
-
  var cadastro= [
 {'nome':'Tadeu Robes', 'vinculo': 'PJ'},
 {'nome':'Agenor de FARIA JUNIOR', 'vinculo': 'Cooperado(a)'},
@@ -335,14 +333,12 @@
  ]
 // Inicializar o array para armazenar os valores atualizados
 var planilhaFinal = [];
-
 // Criar um mapa para facilitar a busca por nome em planilhaEmily
 var planilhaEmilyMap = {};
 for (var i = 0; i < planilhaEmily.length; i++) {
     var item = planilhaEmily[i];
     planilhaEmilyMap[item.nome.toLowerCase()] = item.vinculo;
 }
-
 // Iterar sobre o array cadastro e atualizar os vínculos
 for (var j = 0; j < cadastro.length; j++) {
     var cadastroItem = cadastro[j];
@@ -354,7 +350,6 @@ for (var j = 0; j < cadastro.length; j++) {
 }
 planilhaFinal
 console.log(planilhaFinal);
-
 /*
  var1 ='INSTALAÇÃO FLUIG'
  var2 ='INSTALAÇÃO DO FLUIG IDENTITY'
@@ -825,7 +820,6 @@ console.log(planilhaFinal);
  'PJ'
  'PJ'
  'Cooperado'
-
  'PJ'
 'Cooperado(a)'
 'PJ'
@@ -1034,7 +1028,6 @@ Cooperado
 PJ
 Cooperado
 */
-
 /*ARRUMAR PLANILHA
 AGENOR DE FARIA JUNIOR
 AIRTON FERNANDES LIMA
@@ -1241,13 +1234,9 @@ var newValues = [
 {"Recursos": "YURI MILAN PORTO", "Sistema(s)":"Protheus", "Vinculo": "PJ"},
 {"Recursos": "YURI ROMAN", "Sistema(s)":"Protheus", "Vinculo": "Cooperado(a)"}
 ]
-
-
-
-//código das 3 colunas form cad recurso
+//código das  colunas form cad recurso
 var constraints = [];
 constraints.push(DatasetFactory.createConstraint('metadata#active', true, true, ConstraintType.MUST));
-
 var fields = [
     "nmCadRecurso",
     "sobreNmCadRecurso",
@@ -1258,9 +1247,7 @@ var fields = [
     "tpSistProtheus",
     "tpSistRm"
 ];
-
 var ds = DatasetFactory.getDataset('dsFormCadRecurso', fields, constraints, null);
-
 if (ds && ds.values) {
     var newFieldNames = {
         "nmCadRecurso": "Nome",
@@ -1272,14 +1259,12 @@ if (ds && ds.values) {
         "tpSistProtheus": "PROTHEUS",
         "tpSistRm": "RM"
     };
-
     // Mapear valores de vínculo para suas representações desejadas
     var vinculoMap = {
         'pj': 'PJ',
         'coop': 'Cooperado(a)',
         'clt': 'CLT'
     };
-
     // Função para normalizar e remover caracteres acentuados repetidos
     function normalizeString(str) {
         if (!str) return '';
@@ -1288,13 +1273,10 @@ if (ds && ds.values) {
             .trim() // Remover espaços em branco no início e no fim
             .toLowerCase(); // Convertendo para minúsculas
     }
-
     var filteredValues = ds.values.map(function(record) {
         var newRecord = {};
-
         // Usar um Set para garantir que não haja repetições de palavras
         var uniqueWords = new Set();
-
         // Processar e limpar os campos antes de adicionar ao Set
         if (record["nmCadRecurso"]) {
             normalizeString(record["nmCadRecurso"]).split(" ").forEach(word => uniqueWords.add(word));
@@ -1305,22 +1287,18 @@ if (ds && ds.values) {
         if (record["nomeParticular"]) {
             normalizeString(record["nomeParticular"]).split(" ").forEach(word => uniqueWords.add(word));
         }
-
         // Recriar a string com palavras únicas e formatar a string
         var recursos = Array.from(uniqueWords).join(" ");
         newRecord["Recursos"] = recursos.split(' ').map(word => {
-            return word.charAt(0).toUpperCase() + word.slice(1);
+            return word.charAt(0).toUpperCase() + word.slice();
         }).join(' ').toUpperCase(); // Converter para maiúsculas
-
         // Consolidar os sistemas em uma única chave "Sistema(s)"
         var sistemas = [];
         if (record["tpSistFluig"] === "on") sistemas.push("FLUIG");
         if (record["tpSistJava"] === "on") sistemas.push("JAVA");
         if (record["tpSistProtheus"] === "on") sistemas.push("PROTHEUS");
         if (record["tpSistRm"] === "on") sistemas.push("RM");
-
         newRecord["Sistema(s)"] = sistemas.join(", ");
-
         // Copiar e renomear outras chaves desejadas, removendo as chaves específicas
         fields.forEach(function(field) {
             if (record.hasOwnProperty(field) && !["nmCadRecurso", "sobreNmCadRecurso", "nomeParticular", "tpSistFluig", "tpSistJava", "tpSistProtheus", "tpSistRm"].includes(field)) {
@@ -1333,26 +1311,185 @@ if (ds && ds.values) {
                 }
             }
         });
-
         return newRecord;
     });
-
     // Ordenar o array filtrado alfabeticamente pelo campo "Recursos"
     filteredValues.sort(function(a, b) {
         var nameA = a.Recursos ? a.Recursos.toUpperCase() : ""; // Ignorar maiúsculas e minúsculas
         var nameB = b.Recursos ? b.Recursos.toUpperCase() : ""; // Ignorar maiúsculas e minúsculas
-        
         if (nameA < nameB) {
-            return -1;
+            return -;
         }
         if (nameA > nameB) {
-            return 1;
+            return ;
         }
         return 0;
     });
-
     console.log(filteredValues);
 } else {
     console.log('Erro ao obter o dataset. Dataset:', ds);
 }
 //fazer a mesma coisa com a matriz de capacitacao
+var constraints = [];
+constraints.push(DatasetFactory.createConstraint('metadata#active', true, true, ConstraintType.MUST));
+var fields = [
+    "nomSolic",
+    "unidade",
+    "tpSistFluig",
+    "tpSistJava",
+    "tpSistProtheus",
+    "tpSistRm"
+];
+var ds = DatasetFactory.getDataset('formMatrizCapacitacao', fields, constraints, null);
+if (ds && ds.values) {
+    var filteredValues = ds.values.map(function(record) {
+        var newRecord = {}; // Novo objeto para armazenar os campos filtrados
+        // Mapear a unidade para os novos valores
+        var unidadeMap = {
+            "01": "TSM",
+            "03": "TSul",
+            "04": "TVale"
+        };
+        // Se a unidade existir no mapeamento, substitua pelo valor mapeado
+        if (record.hasOwnProperty('unidade') && unidadeMap[record.unidade]) {
+            newRecord.unidade = unidadeMap[record.unidade];
+        } else {
+            newRecord.unidade = record.unidade; // Manter o valor original se não houver mapeamento
+        }
+        // Iterar sobre os campos desejados
+        fields.forEach(function(field) {
+            if (field !== 'unidade' && field !== 'tpSistFluig' && field !== 'tpSistJava' && field !== 'tpSistProtheus' && field !== 'tpSistRm') {
+                if (record.hasOwnProperty(field)) {
+                    newRecord[field] = record[field];
+                }
+            }
+        });
+        // Combinar as chaves de sistemas em uma única chave "Sistema(s)"
+        var sistemas = [];
+        if (record.tpSistFluig === 'on') sistemas.push("Fluig");
+        if (record.tpSistJava === 'on') sistemas.push("Java");
+        if (record.tpSistProtheus === 'on') sistemas.push("Protheus");
+        if (record.tpSistRm === 'on') sistemas.push("RM");
+        newRecord["Sistema(s)"] = sistemas.join(', ');
+        return newRecord; // Retornar o novo objeto filtrado
+    });
+    filteredValues.sort(function(a, b) {
+        var nameA = a.Recursos ? a.Recursos.toUpperCase() : ""; // Ignorar maiúsculas e minúsculas
+        var nameB = b.Recursos ? b.Recursos.toUpperCase() : ""; // Ignorar maiúsculas e minúsculas
+        if (nameA < nameB) {
+            return -;
+        }
+        if (nameA > nameB) {
+            return ;
+        }
+        return 0;
+    });
+    console.log(filteredValues); // Exibir os valores filtrados
+} else {
+    console.log('Erro ao obter o dataset. Dataset:', ds);
+}
+// ARRAY DOS  DATASETS
+//MATRIZ
+//CAD
+var array=[
+{'Recursos': 'AGENOR FARIA JUNIOR', 'Sistema(s)': 'FLUIG, PROTHEUS', 'Vinculo': 'Cooperado(a)', 'Unidade': 'TSM'},
+{'Recursos': 'AIRTON FERNANDES LIMA', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'PJ', 'Unidade': 'TSM'},
+{'Recursos': 'ALBERTO URSINI FILHO', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'PJ', 'Unidade': 'TSM'},
+{'Recursos': 'ALEXANDRE MONTANI DE OLIVEIRA', 'Sistema(s)': 'PROTHEUS', 'Vinculo': '', 'Unidade': 'TSM'},
+{'Recursos': 'ALEXANDRE NUNES GOMES', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'Cooperado(a)', 'Unidade': 'TVale'},
+{'Recursos': 'ALISSON FERNANDES ELIAS', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'Cooperado(a)', 'Unidade': 'TSM'},
+{'Recursos': 'ANDRE DA SILVA RODRIGUES', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'Cooperado(a)', 'Unidade': 'TSM'},
+{'Recursos': 'ANDRE HYODO JUHEI', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'Cooperado(a)', 'Unidade': 'TSM'},
+{'Recursos': 'ANDRESSA AREM', 'Sistema(s)': 'FLUIG, PROTHEUS', 'Vinculo': 'Cooperado(a)', 'Unidade': 'TSM'},
+{'Recursos': 'ANDREZA SUELEM DUARTE ROCHA', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'Cooperado(a)', 'Unidade': 'TSM'},
+{'Recursos': 'AUGUSTO MEIRELLES', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'Cooperado(a)', 'Unidade': 'TVale'},
+{'Recursos': 'CAMILA THAMIRES MARTINS DE SOUZA', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'CLT', 'Unidade': 'TSM'},
+{'Recursos': 'CARLOS ALBERTO LOPES DA SILVA', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'Cooperado(a)', 'Unidade': 'TSM'},
+{'Recursos': 'CESAR AUGUSTO BRANDAO', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'Cooperado(a)', 'Unidade': 'TSM'},
+{'Recursos': 'CLAITON ANDRADE', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'Cooperado(a)', 'Unidade': 'TSM'},
+{'Recursos': 'CLEBER CINTRA BARBOSA', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'PJ', 'Unidade': 'TSM'},
+{'Recursos': 'CRISTIAN EDUARDO HIDALGO CERDA', 'Sistema(s)': '', 'Vinculo': '', 'Unidade': 'TSM'},
+{'Recursos': 'DANIELA CANHAMEIRO', 'Sistema(s)': 'FLUIG, PROTHEUS', 'Vinculo': 'Cooperado(a)', 'Unidade': 'TSM'},
+{'Recursos': 'DAVID DE OLIVEIRA SOBRINHO','Sistema(s)': 'Protheus', 'Vinculo':'PJ', 'Unidade': 'TSM'},
+{'Recursos': 'DJALMA BORGES NETO', 'Sistema(s)': 'Protheus', 'Vinculo':'PJ', 'Unidade': 'TSM'},
+{'Recursos': 'DOUGLAS GONCALVES DE SOUZA', 'Sistema(s)': 'FLUIG, PROTHEUS', 'Vinculo': 'Cooperado(a)', 'Unidade': 'TSM'},
+{'Recursos': 'EDUARDO BERTAIA', 'Sistema(s)': 'FLUIG, PROTHEUS', 'Vinculo': 'Cooperado(a)', 'Unidade': 'TVale'},
+{'Recursos': 'EDUARDO SANCHEZ CIDRON', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'PJ', 'Unidade': 'TSM'},
+{'Recursos': 'ELIVELTON DE OLIVEIRA CANEDO', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'CLT', 'Unidade': 'TSM'},
+{'Recursos': 'EMILY SILVA DE SOUZA', 'Sistema(s)': 'FLUIG, PROTHEUS', 'Vinculo': 'CLT', 'Unidade': 'TSM'},
+{'Recursos': 'EVALDO VAGNER BATISTA', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'PJ', 'Unidade': 'TSM'},
+{'Recursos': 'FABIO VERALDI ALVES', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'Cooperado(a)', 'Unidade': 'TSM'},
+{'Recursos': 'FELIPE DOS ANJOS DENTELLO', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'Cooperado(a)', 'Unidade': 'TSM'},
+{'Recursos': 'FERNANDA AMORIM SILVA', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'CLT', 'Unidade': 'TSM'},
+{'Recursos': 'FERNANDO EUGENIO DA SILVA', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'PJ', 'Unidade': 'TSM'},
+{'Recursos': 'FERNANDO LOURENCONI BARRETO ALMEIDA', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'PJ', 'Unidade': 'TSM'},
+{'Recursos': 'GABRIEL ALVES DE SOUZA', 'Sistema(s)': 'FLUIG, PROTHEUS', 'Vinculo': 'CLT', 'Unidade': 'TVale'},
+{'Recursos': 'GABRIEL SANTOS', 'Sistema(s)': 'FLUIG, PROTHEUS', 'Vinculo': 'Cooperado(a)', 'Unidade': 'TSM'},
+{'Recursos': 'GERSON APARECIDO DE JESUS BELINI', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'PJ', 'Unidade': 'TVale'},
+{'Recursos': 'GIOVANNA ANICETO POPOLILE', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'Cooperado(a)', 'Unidade': 'TSM'},
+{'Recursos': 'GIOVANNI FERNANDES DE SOUZA', 'Sistema(s)': 'FLUIG, PROTHEUS', 'Vinculo': 'Cooperado(a)', 'Unidade': 'TSM'},
+{'Recursos': 'GISELE BRANDAO GENUINO', 'Sistema(s)': '', 'Vinculo': 'Cooperado(a)', 'Unidade': 'TSM'},
+{'Recursos': 'GUILHERME AUGUSTO DE LIMA SILVA', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'PJ', 'Unidade': 'TSM'},
+{'Recursos': 'HENRIQUE GARCIA  DE SOUZA', 'Sistema(s)': 'Protheus', 'Vinculo': CLT, 'Unidade': 'TSM'},
+{'Recursos': 'HEVERSON CARLOS GOMES DE ARAUJO', 'Sistema(s)': 'Protheus', 'Vinculo':'Cooperado(a)', 'Unidade': 'TSM'},
+{'Recursos': 'ISRAEL MACHADO VITAL', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'CLT', 'Unidade': 'TVale'},
+{'Recursos': 'JANAINA GOMES DOS REIS', 'Sistema(s)': 'FLUIG, PROTHEUS, RM', 'Vinculo': 'Cooperado(a)', 'Unidade': 'TSM'},
+{'Recursos': 'JEAN INACIO SILVA', 'Sistema(s)': 'FLUIG, JAVA, PROTHEUS, RM', 'Vinculo': 'Cooperado(a)', 'Unidade': 'TSM'},
+{'Recursos': 'JOAO PAULO PIRES', 'Sistema(s)': 'Protheus', 'Vinculo': 'CLT', 'Unidade': 'TSul'},
+{'Recursos': 'JOAO VITOR PLAZA', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'CLT', 'Unidade': 'TSM'},
+{'Recursos': 'JOSE ROBERTO DA SILVA', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'Cooperado(a)', 'Unidade': 'TSM'},
+{'Recursos': 'JUAREZ CARVALHO DE LIMA', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'Cooperado(a)', 'Unidade': 'TSM'},
+{'Recursos': 'JUAREZ CORDEIRO', 'Sistema(s)': 'RM', 'Vinculo': 'PJ', 'Unidade': 'TSM'},
+{'Recursos': 'KAREN CRISTHINE COELHO', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'Cooperado(a)', 'Unidade': 'TSM'},
+{'Recursos': 'KARINA OLIVEIRA DE LIRA BARBOSA MOURA', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'PJ', 'Unidade': 'TSM'},
+{'Recursos': 'LARISSA DA SILVA LIMA', 'Sistema(s)': 'FLUIG, PROTHEUS', 'Vinculo': 'Cooperado(a)', 'Unidade': 'TSM'},
+{'Recursos': 'LARISSA MARCOS CAMPAGNA', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'PJ', 'Unidade': 'TSM'},
+{'Recursos': 'LEANDRO DOS ANJOS DENTELLO', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'CLT', 'Unidade': 'TSM'},
+{'Recursos': 'LEONARDO CLEMENTE CEZAR', 'Sistema(s)': 'Protheus', 'Vinculo':'Cooperado(a)', 'Unidade': 'TSM'},
+{'Recursos': 'LEONARDO MACEDO DOS SANTOS', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'Cooperado(a)', 'Unidade': 'TSM'},
+{'Recursos': 'LIARA BONIFACIO CRUZ', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'Cooperado(a)', 'Unidade': 'TSM'},
+{'Recursos': 'LUCAS MENDONCA DE SOUZA GONCALVES', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'Cooperado(a)', 'Unidade': 'TVale'},
+{'Recursos': 'LUCIANO MARABINI MARINS', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'Cooperado(a)', 'Unidade': 'TSM'},
+{'Recursos': 'LUIZ EDUARDO BRITO GOMES', 'Sistema(s)': 'FLUIG', 'Vinculo': 'CLT', 'Unidade': 'TSM'},
+{'Recursos': 'LUIZ GUSTAVO RIBEIRO DE OLIVEIRA', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'Cooperado(a)', 'Unidade': 'TSM'},
+{'Recursos': 'LUIZ NATALINO LOLO', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'Cooperado(a)', 'Unidade': 'TSM'},
+{'Recursos': 'MARCOS GEORGE MARICATO', 'Sistema(s)': 'Protheus', 'Vinculo': PJ, 'Unidade': 'TSM'},
+{'Recursos': 'MARIANA BORGES ARAUJO', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'PJ', 'Unidade': 'TSM'},
+{'Recursos': 'MATHEUS ALVES DA SILVA', 'Sistema(s)': 'FLUIG', 'Vinculo': 'CLT', 'Unidade': 'TSM'},
+{'Recursos': 'MATHEUS FERNANDES DA SILVA', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'Cooperado(a)', 'Unidade': 'TSM'},
+{'Recursos': 'MURILO MENDONCA TAVARES', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'PJ', 'Unidade': 'TSM'},
+{'Recursos': 'MYCHEL NATAL', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'PJ', 'Unidade': 'TSM'},
+{'Recursos': 'NORBERTO M DE MELO', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'Cooperado(a)', 'Unidade': 'TSM'},
+{'Recursos': 'PAULA DE CASSIA VALERIO CONTI', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'PJ', 'Unidade': 'TSM'},
+{'Recursos': 'PAULO VILAS BOAS', 'Sistema(s)': 'FLUIG, JAVA, PROTHEUS, RM', 'Vinculo': 'Cooperado(a)', 'Unidade': 'TSM'},
+{'Recursos': 'PEDRO FAVA', 'Sistema(s)': 'FLUIG, PROTHEUS', 'Vinculo': 'CLT', 'Unidade': 'TVale'},
+{'Recursos': 'PEDRO IVO LEONEL BARBOSA', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'PJ', 'Unidade': 'TVale'},
+{'Recursos': 'RAFAEL DOMINGUES DE OLIVEIRA', 'Sistema(s)': 'Protheus', 'Vinculo':'PJ', 'Unidade': 'TSM'},
+{'Recursos': 'RAFAEL GOMES DO AMARAL', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'Cooperado(a)', 'Unidade': 'TSM'},
+{'Recursos': 'RAFAEL TURRINI CEGANTINI', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'Cooperado(a)', 'Unidade': 'TSM'},
+{'Recursos': 'RAFAEL VICTORIO BEZERRA', 'Sistema(s)': '', 'Vinculo': 'CLT', 'Unidade': 'TSM'},
+{'Recursos': 'RENAN GONCALVES', 'Sistema(s)': 'FLUIG, PROTHEUS', 'Vinculo': 'PJ', 'Unidade': 'TVale'},
+{'Recursos': 'RENATO FREIRE JUNIOR', 'Sistema(s)': 'Protheus, RM', 'Vinculo': 'Cooperado(a)', 'Unidade': 'TVale'},
+{'Recursos': 'RODOLFO FERREIRA DA SILVA', 'Sistema(s)': '', 'Vinculo': '', 'Unidade': 'TSM'},
+{'Recursos': 'ROLANDO LINDBERG', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'PJ', 'Unidade': 'TVale'},
+{'Recursos': 'RONALDO TADEU ROBES', 'Sistema(s)': '', 'Vinculo': 'PJ', 'Unidade': 'TVale'},
+{'Recursos': 'ROSELI LEANDRO DO PRADO', 'Sistema(s)': 'RM', 'Vinculo': '', 'Unidade': 'TSM'},
+{'Recursos': 'SAMUEL RENAN', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'CLT', 'Unidade': 'TSM'},
+{'Recursos': 'SERGIO NORIO KANASHIRO', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'Cooperado(a)', 'Unidade': 'TSM'},
+{'Recursos': 'STANKO ZLATKOVIC C. DE MIRANDA', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'PJ', 'Unidade': 'TSM'},
+{'Recursos': 'TATIANA ABRANCHES', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'Cooperado(a)', 'Unidade': 'TSM'},
+{'Recursos': 'TATIANA MAIA LUSITANO', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'PJ', 'Unidade': 'TSM'},
+{'Recursos': 'THAIS GOES', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'Cooperado(a)', 'Unidade': 'TSM'},
+{'Recursos': 'THALYS AUGUSTO', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'Cooperado(a)', 'Unidade': 'TSM'},
+{'Recursos': 'THIAGO FERNANDES GIDZINSKI', 'Sistema(s)': 'FLUIG, PROTHEUS', 'Vinculo': 'PJ', 'Unidade': 'TVale'},
+{'Recursos': 'VALDIRENE MAGALHAES PINHEIRO', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'Cooperado(a)', 'Unidade': 'TSM'},
+{'Recursos': 'VANDERLEI PIASSE', 'Sistema(s)': 'FLUIG, PROTHEUS', 'Vinculo': 'Cooperado(a)', 'Unidade': 'TVale'},
+{'Recursos': 'VINICIUS DAVI CHWALENSKY', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'PJ', 'Unidade': 'TSM'},
+{'Recursos': 'VINICIUS TEIXEIRA VENANCIO DA CUNHA', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'Cooperado(a)', 'Unidade': 'TSM'},
+{'Recursos': 'VITOR EDUARDO DE JESUS', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'Cooperado(a)', 'Unidade': 'TSM'},
+{'Recursos': 'VITOR GUILHERME ALVES VICTOR', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'Cooperado(a)', 'Unidade': 'TSM'},
+{'Recursos': 'WALBER SOBRINHO MENEZES', 'Sistema(s)': 'Protheus', 'Vinculo': 'Cooperado(a)', 'Unidade': 'TVale'},
+{'Recursos': 'WALLACE RODRIGUES', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'Cooperado(a)', 'Unidade': 'TVale'},
+{'Recursos': 'WESLEY ADELAIDE ROSA', 'Sistema(s)': 'Protheus', 'Vinculo':'Cooperado(a)', 'Unidade': 'TSul'},
+{'Recursos': 'YURI MILAN PORTO', 'Sistema(s)': 'Protheus', 'Vinculo':'PJ', 'Unidade': 'TSM'},
+{'Recursos': 'YURI ROMAN', 'Sistema(s)': 'PROTHEUS', 'Vinculo': 'Cooperado(a)', 'Unidade': 'TSM'}]

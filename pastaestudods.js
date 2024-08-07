@@ -54,42 +54,57 @@ if (ds.values.length > 0) {                                                     
     }
 }
 
-
-
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////CONSTRUÇÃO DE DATASET/////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////Adição de informações manual///////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+function defineStructure() {
+
+}
+function onSync(lastSyncDate) {
+
+}
 function createDataset(fields, constraints, sortFields) {
-    var dataset = DatasetBuilder.newDataset();                                                      // OBJETO QUE INSTACIA UM NOVO DATASET, TODOS DATASETS TEM QUE TER ESSA VARIAVEL
-    dataset.addColumn("DocumentId");
-    dataset.addColumn("coluna2");
-    dataset.addColumn("coluna3");
+	var dataset = DatasetBuilder.newDataset();
+	dataset.addColumn("Produto");
+	dataset.addColumn("Valor");
+	dataset.addRow(new Array("Refrigerador", 1500));                                                //adiciona uma linha Refrigerador 1500
+	dataset.addRow(new Array("Guarda-Roupas", 2000));
+	dataset.addRow(new Array("Fogão", 3500));
+	dataset.addRow(new Array("Ferro de passar", 100));
+	dataset.addRow(new Array("Maquina de lavar", 800));
+	return dataset;
 
-    var c1 = DatasetFactory.createConstraint("metadata#active", true, true, ConstraintType.MUST)
-    var constraints = new Array(c1);
-    var dsInterno = DatasetFactory.getDataset('dsFormulario', null, constraints, null);//Dataset_do_formulario
-    var contador = dsInterno.rowsCount;
-    for(var i = 0; i < contador; i++){
-        var docId = ds.getValue(i, "metadata#id");
-		var docVersion = ds.getValue(i, "metadata#version");
-        var tabela = "nomeTabela"
-        var c1 = DatasetFactory.createConstraint("tablename",tabela, tabela, ConstraintType.MUST);
-		// VARIAVEIS CRIADAS ACIMAS COM OS METADADOS DO FORMULARIO
-		var c2 = DatasetFactory.createConstraint("metadata#id", docId,docId, ConstraintType.MUST);
-		var c3 = DatasetFactory.createConstraint("metadata#version", docVersion, docVersion, ConstraintType.MUST);
-        var constraintsTable = new Array(c1,c2,c3);
-        var datasetTable = DatasetFactory.getDataset(dsInterno, null, constraintsTable, null);//Dataset_do_formulario
-        var contadorTabela = datasetTable.rowsCount;
-        for (var j = 0; j < contadorTabela; j++){
-            dataset.addRow(
-                new Array(
-                    docId,
-                    datasetTable.getValue(j, "coluna2"),
-                    datasetTable.getValue(j, "coluna3")
-                )
-            )
-        }
-    }
+}function onMobileSync(user) {
+
+}
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////CONSTRUÇÃO DE DATASET SEM CONSULTAR PAI FILHO////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+function defineStructure() {
+
+}
+function onSync(lastSyncDate) {
+
+}
+function createDataset(fields, constraints, sortFields) {
+	var ds = DatasetBuilder.newDataset();
+	ds.addColumn("Nome")//Coluna de Nomes
+	ds.addColumn("Dia e hora da reunião")//Coluna de info da reunião
+	var c1 = DatasetFactory.createConstraint("metadata#active", true, true, ConstraintType.MUST) //pego os ativos
+    var filtro = new Array(c1);//crio o filtro
+    var dsInterno = DatasetFactory.getDataset('dsFORMPRIN', null, filtro, null);//consulto o dataset com as info que eu quero
+    if (dsInterno.rowsCount > 0) {                                              // VERIFICA SE RETORNOU
+		for (var i = 0; i < dsInterno.rowsCount; i++) {							//CASO RETORNE, PERCORRE OS DADOS
+			ds.addRow(new Array(
+				dsInterno.getValue(i, 'arq'),									//Com os dados do interno, constroe o novo
+				dsInterno.getValue(i, 'diaehora')
+				));
+		}
+	}
+	return ds;
+
+}function onMobileSync(user) {
+
 }
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////CONSTRUÇÃO DE DATASET QUE CONSULTA OUTRO PARA TABELA PAI FILHO//////////////////////////////////////////
