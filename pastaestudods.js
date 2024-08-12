@@ -166,28 +166,23 @@ function createDataset(fields, constraints, sortFields) {
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 var constraints = [];
 constraints.push(DatasetFactory.createConstraint('metadata#active', true, true, ConstraintType.MUST));
+var fields = ["variavel"]
+var ds = DatasetFactory.getDataset('nomeDataset', fields, constraints, null);
 
-var fields = [
-    "nmCadRecurso","sobreNmCadRecurso","tipServico","tpSistFluig","tpSistJava","tpSistProtheus","tpSistRm" //todos os campos que deseja
-];
-
-var ds = DatasetFactory.getDataset('dsFormCadRecurso', fields, constraints, null);
-
-if (ds && ds.values) {                                                                              
-    var filteredValues = ds.values.map(function(record) {                                               //apaga os campos não necessários
-        var newRecord = {};
-        
-        // Copiar apenas os campos desejados
-        fields.forEach(function(field) {
-            if (record.hasOwnProperty(field)) {
-                newRecord[field] = record[field];
-            }
-        });
-
-        return newRecord;
-    });
-
-    console.log(filteredValues);
+if (ds && ds.values) {
+    console.log(ds);
 } else {
     console.log('Erro ao obter o dataset. Dataset:', ds);
+}
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////Formatar Datas/////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+function formatarData(data) {
+    if (data.indexOf("-") !== -1) {
+        // Se a data está no formato "yyyy-MM-dd", converta para "dd/MM/yyyy"
+        var partes = data.split("-");
+        return partes[2] + "/" + partes[1] + "/" + partes[0];
+    }
+    // Caso já esteja no formato correto, retorne a data como está
+    return data;
 }
