@@ -283,3 +283,1036 @@ RM - PROGR. EM SQL  SERVER - AMB CORPORE
 RM - GERADOR RELATÓRIOS - LABORE
 RM - GERADOR RELATÓRIOS - FLUXUS
 RM - GERADOR RELATÓRIOS - NUCLEUS
+//////////////////////////////////////////////////////////////////////////INPUTS////////////////////////////////////////////////////////////////////
+JavaScript
+WebServiceRest
+WebServiceSoap
+acWebService
+admPlatViaSaas
+agile
+ajax
+altDispFluig
+ambProgOutros
+aopOutros
+apache
+aspectj
+ativoFixo
+autBuildOutros
+banDadosOutros
+cnab
+compras
+conGerWebOutros
+confBPM
+confECM
+confRedeFluig
+confSocial
+confWCM
+configurador
+contPagar
+contReceber
+contabGerencial
+contrCustos
+contrProducao
+crBaseDadosFluig
+crmCalCen
+crmGesPesRes
+css
+db2
+desProthReport
+desktopSwing
+devCompEspIntSist
+devCompIntSist
+devFormHtmlCompl
+devMetUtil
+devMobFormHtmlCompl
+devProjViaCloudConn
+devRelatDashb
+distDistrOms
+eclipse
+estoqCusto
+extJS
+faturamento
+ferVersOutros
+ferrIntOutros
+ferraTestOutros
+fieldServAssTec
+fiscLivrFiscal
+flAnalytEvent
+fraWorJavScrOutros
+framPersOutros
+funcProthReport
+gestAgricola
+gestContrato
+gestFretEmbGfe
+gestProjetosPms
+git
+glassFish
+gradule
+hibernate
+html5
+indDwNativos
+infraEstrut
+instFlIdentADFluig
+instFlIdentFluig
+instFluig
+jBoss
+jBossAop
+jQuery
+jSpringAop
+jUnit
+javaScriptMvc
+jdbc
+jms2
+jms3
+jpa
+json
+jsp
+layWcmCustHtmlJS
+lean
+lingJava
+manutAtivosMnt
+manutFrota
+maven
+mcsMobConnStudio
+metTrabOutros
+micronaut
+mobAndroid
+mockito
+movtoBancario
+mvcOutros
+mySql
+netbeans
+nfe
+nodeJS
+oracle
+painOffLine
+painOnLine
+planContrOrcam
+planContrProd
+platafWeb
+postgree
+prothAssConfServ
+prothAutEntRap
+prothAutForVen
+prothAvaPesDes
+prothBiBalSco
+prothBiBpm
+prothBiDatWerHou
+prothBiGesInd
+prothBiWorFlo
+prothCarSal
+prothComExtBalSco
+prothComExtBpm
+prothComExtDatWer
+prothComExtGesInd
+prothComExtWorflo
+prothConNaoConfQnc
+prothConRel
+prothContAud
+prothContDocQdo
+prothContLojSig
+prothDirAutorais
+prothEsoc
+prothFidAnaCred
+prothFroLojFlj
+prothFuncProthReport
+prothGesAcerv
+prothGesAmb
+prothGesArmWms
+prothGesEduc
+prothGesHospitalar
+prothGesPes
+prothGesPesMetro
+prothGesRis
+prothGesTranTms
+prothIndDwNat
+prothInsEnt
+prothInsPro
+prothIntCry
+prothIntRep
+prothMedSegTrab
+prothMetrol
+prothOficinas
+prothPadOpe
+prothPainOffli
+prothPainOnl
+prothPecas
+prothPonEleCon
+prothPonElet
+prothPpaMedPec
+prothProcTrab
+prothRecSelPes
+prothRecSelPesIns
+prothSea
+prothTotOffInter
+prothTrein
+prothVeiculos
+protheusSearch
+quarkuz
+reflection
+replDados
+rmAgiWork
+rmArqInsRm
+rmBibGesBib
+rmBonAti
+rmChroPonEle
+rmClasGesEdu
+rmClasNet
+rmConsSqlBis
+rmFacGesManu
+rmFluApliEmp
+rmFluContPag
+rmFluContRec
+rmFluGesFin
+rmGerRelFlux
+rmGerRelLab
+rmGerRelNuc
+rmLabFolha
+rmLabForm
+rmLibFiscal
+rmLibSpedFis
+rmNfe
+rmNucCompras
+rmNucEstoques
+rmNucFaturam
+rmNucProcess
+rmNucRessuprim
+rmOffGesManu
+rmProgSqlAmbCorp
+rmSalContab
+rmSalFecham
+rmSgiGesImob
+rmSolGesObr
+rmTestAval
+rmVitRec
+rmVitSegMed
+rmVitTreina
+scrum
+selenium
+servApliOutros
+servlets
+spedContabil
+spedFiscal
+spring2
+spring3
+springBoot
+springMvc
+sqlServer
+struts2
+svn
+tomCat
+totvsDBAccess
+totvsDBAuditTrail
+totvsMon
+totvsOffInterface
+webLogic
+widWcmCustHtmlJS
+xp
+///////////////////////////////////////ANTIGOS////////////////////////////////////////////////////////////
+RECURSOS
+INSTALAÇÃO
+INSTALAÇÃO FLUIG
+INSTALAÇÃO DO FLUIG IDENTITY 
+CONFIGURAÇÃO DO FLUIG IDENTITY (AD E PROD. TOTVS)
+CRIAÇÃO DE BASE DE DADOS FLUIG
+CONFIGURAÇÃO REDE (DMZ, DNS, SSL)
+ALTA DISPONIBILIDADE(TOMCAT, BIGIP)
+IMPLANTAÇÃO - CONFIGURAÇÃO FLUIG PLATAFORMA
+CONFIGURAÇÃO DO ECM
+CONFIGURAÇÃO DO BPM
+CONFIGURAÇÃO DO WCM
+CONFIGURAÇÃO DO SOCIAL
+IMPLANTAÇÃO - WCM E BPM
+DESENVOLVIMENTO DE FORMULÁRIOS HTML COMPLEXOS
+LAYOUTS WCM CUSTOMIZADOS EM HTML E JAVA SCRIPT
+WIDGETS WCM CUSTOMIMZADOS HTML E JAVA SCRIPT
+ACESSO AO WEB SERVICES SOAP/REST
+DESENVOLVIMENTO IDENTITY
+DESENVOLVIMENTO DE COMPONENTES ESPECÍFICOS DE INTEGRAÇÃO COM SISTEMAS
+DESENVOLVIMENTO ESB
+DESENVOLVIMENTO DE COMPONENTES DE INTEGRAÇÃO COM SISTEMAS
+DESENVOLVIMENTO MOBILE
+DESENVOLVIMENTO DE FORMULÁRIOS HTML COMPLEXOS
+DESENVOLVIMENTO GOODDATA
+FLUIG ANALYTICS E EVENTOS
+DESENVOLVIMENTO DE PROJETOS VIA CLOUD CONNECT (MODELAGEM E CARGAS)
+DESENVOLVIMENTO DE RELATÓRIOS E DASHBOARDS VIA PLATAFORMA SAAS
+DESENVOLVIMENTO DE MÉTRICAS UTILIZANDO MAQL
+ADMINISTRADOR DA PLATAFORMA VIA SAAS
+FUNCIONALIDADE
+PROTHEUS REPORT
+PAINEIS ON-LINE
+TOII TOTVS OFFICE INTERFACE
+PROTHEUS SEARCH
+INDICADORES DW NATIVOS
+PAINEIS OFF-LINE
+RECURSOS
+NÍVEL DE CONHECIMENTO
+Júnior em evolução (implanta parcial)
+1
+Pleno (conhece o sistema e implanta)
+2
+Sênior (implanta e conhece regras de negócios)
+3
+Consultor Especialista
+4
+MVC
+JSF/RICH FACES
+JSF/PRIMEFACES
+JSF/ICE FACES
+JSF/MY FACES
+STRUTS 1
+STRUTS 2
+SPRING MVC
+SERVLETS
+JSP
+FRAMEWORK DE PERSISTÊNCIA
+HIBERNATE
+JPA
+ECLIPSE LINK
+TOP LINK
+IBATIS
+JDBC
+JDO
+FERRAMENTAS DE INTEGRAÇÃO
+EJB 3.1
+EJB 3.0
+EJB 2.1
+SPRING 3
+SPRING 2
+JMS 3
+JMS 2
+WEBSERVICES SOAP
+WEBSERVICES REST
+CONHECIMENTOS GERAIS WEB
+HTML 5
+JAVASCRIPT
+JSON
+CSS
+AJAX
+FERRAMENTAS DE TESTE
+JUNIT
+SELENIUM
+ARQUILIAN
+CACTUS
+FRAMEWORKS JAVASCRIPT
+JQUERY
+NODE JS
+EXT JS
+JAVACRIPT MVC
+GOOGLE WEB TOOLKIT
+DOJO
+YUI
+FERRAMENTAS DE VERSIONAMENTO
+SVN
+GIT
+CVS
+MERCURIAL
+AUTOMAÇÃO DE BUILD
+MAVEN
+ANT
+IVY
+BANCO DE DADOS
+ORACLE
+SQL SERVER
+POSTGREE
+DB2
+MYSQL
+AMBIENTES DE PROGRAMAÇÃO
+ECLIPSE
+NETBEANS
+JDEVELOPER
+METODOLOGIAS DE TRABALHO
+SCRUM
+XP
+LEAN
+AGILE
+SERVIDORES DE APLICAÇÃO
+TOMCAT
+JBOSS
+WEBSPHERE
+WEBLOGIC
+GLASSFISH
+AOP
+ASPECTJ
+JBOSS AOP
+SPRING AOP
+PLATAFORMA JAVA
+MOBILE / ANDROID
+PLATAFORMA WEB
+DESKTOP / SWING
+REFLECTION
+LINGUAGEM JAVA
+RECURSOS
+NÍVEL DE CONHECIMENTO
+INFRA-ESTRUTURA
+INFRA-ESTRUTURA
+TOTVS MONITOR
+RÉPLICA DE DADOS
+MCS MOBLIE CONNECTIVITY STUDIO
+CONFIGURADOR
+TOTVS DBACCESS
+TOTVS DBAUDIT TRAIL
+MATERIAIS
+COMPRAS
+FATURAMENTO
+ESTOQUE/CUSTOS
+CONTROLE DE PRODUÇÃO
+CONTROLE DE CUSTOS
+PLANEJAMENTO E CONTROLE DE PRODUÇÃO - PCP
+GESTÃO DE CONTRATOS
+MANUTENÇÃO DE ATIVOS (MNT)
+MANUTENÇÃO DE FROTA
+GESTÃO AGRÍCOLA
+CONTROLADORIA - SPED
+SPED FISCAL
+SPED CONTáBIL
+NF-E
+CONTROLADORIA - CONTÁBIL / FISCAL
+CONTABILIDADE GERENCIAL
+ATIVO FIXO
+FISCAL (LIVROS FISCAIS)
+PLANEJAMENTO E CONTROLE ORÇAMENTÁRIO
+CONTROLADORIA - FINANCEIRO
+CONTAS A PAGAR
+CONTAS A RECEBER
+MOVIMENTAÇÃO BANCÁRIA
+CNAB
+PMS
+GESTÃO DE PROJETOS - PMS
+DIST. E LOGÍSTICA - WMS
+GESTÃO DE ARMAZENAGEM - WMS
+DIST. E LOGÍSTICA - TMS
+GESTÃO DE TRANSPORTE - TMS
+DIST. E LOGÍSTICA - OMS
+GESTÃO DE DISTRIBUIÇÃO - OMS
+GFE
+GESTÃO DE FRETE EMBARCADOR - GFE
+CRM
+CALL CENTER
+GESTÃO DE PESQUISA E RESULTADO
+FIELD SERVICE - (ASSIST. TÉCNICA)
+RECURSOS HUMANOS
+GESTÃO PESSOAL
+PONTO ELETRÔNICO
+RECRUTAMENTO E SELEÇÃO DE PESSOAL
+TREINAMENTO
+CARGOS E SALÁRIOS
+AVALIAÇÃO E PESQUISA DE DESEMPENHO
+PROCESSOS TRABALHISTAS
+MEDICINA E SEGURANÇA DO TRABALHO
+E-SOCIAL
+QUALIDADE
+GESTÃO PESSOAL METROLOGIA (QMT)
+PONTO ELETRÔNICO CONTROLE DE NÃO-CONFORMIDADES (QNC)
+RECRUTAMENTO E SELEÇÃO DE PESSOAL INSPEÇÃO DE PROCESSOS (QIP)
+METROLOGIA (QMT)
+CONTROLE DE NÃO-CONFORMIDADES (QNC)
+INSPEÇÃO DE PROCESSOS (QIP)
+INSPEÇÃO DE ENTRADA (QIE)
+GESTÃO AMBIENTAL
+GESTÃO DE RISCO
+CONTROLE DE AUDITORIAS
+CONTROLE DE DOCUMENTOS (QDO)
+PPAP - MEDIÇÃO DE PEÇAS
+AUTOMAÇÃO COMERCIAL
+CONTROLE DE LOJA (SIGALOJA)
+FIDELIZAÇÃO E ANALISE DE CREDITO
+FRONT LOJA (FLJ)
+CONCESSIONÁRIAS
+OFICINAS
+VEÍCULOS
+PEÇAS
+BI
+BPM
+GESTÃO DE INDICADORES
+WORKFLOW
+BALANCED SCORECARD
+DATAWEREHOUSE
+COMÉRCIO EXTERIOR
+BPM
+GESTÃO DE INDICADORES
+WORKFLOW
+BALANCED SCORECARD
+DATAWEREHOUSE
+SAÚDE
+GESTÃO HOSPITALAR
+VENDAS
+DIREITOS AUTORAIS
+AUTOMAÇÃO DA FORÇA DE VENDAS (SFA)
+AUTOMAÇÃO DA ENTREGA RAPIDA
+EDUC.
+GESTÃO EDUCACIONAL
+GESTÃO ACERVOS
+INICIANDO
+ASSISTENTE DE CONFIGURAÇÕES DO SERVIDOR
+INTEGRAÇÃO REPORTS
+INTEGRAÇÃO CRYSTAL
+CONSULTA RELACIONAL
+PADRÃO DE OPERAÇÃO
+FUNCIONALIDADE
+PROTHEUS REPORT
+PAINEIS ON-LINE
+TOII TOTVS OFFICE INTERFACE
+PROTHEUS SEARCH
+INDICADORES DW NATIVOS
+PAINEIS OFF-LINE
+DESENVOLVIMENTO
+PROTHEUS REPORT
+ANALISTAS
+NÍVEL DE CONHECIMENTO
+NUCLEUS
+RM - NUCLEUS - COMPRAS
+RM - NUCLEUS - PROCESSOS
+RM - NUCLEUS - FATURAMENTO
+RM - NUCLEUS - RESSUPRIMENTOS
+RM - NUCLEUS - ESTOQUES
+SALDUS
+RM - SALDUS - CONTABILIDADE
+RM - SALDUS -FECHAMENTOS
+LIBER
+RM - LIBER - FISCAL
+RM - LIBER - SPED FISCAL
+NF
+RM - NFE
+BONUM
+RM - BONUM - ATIVO
+FLUXUS
+RM - FLUXUS - CONTAS A PAGAR
+RM - FLUXUS - CONTAS A RECEBER
+RM - FLUXUS - APLICAÇÕES E EMPRESTIMOS
+RM - FLUXUS - GESTÃO FINANCEIRA
+VITAE
+RM - VITAE - TREINAMENTO
+RM - VITAE - RECRUTAMENTO
+RM - VITAE - SEGURANÇA E MEDICINA
+CHRONUS
+RM - CHRONUS - PONTO ELETRONICO
+DLABORE
+RM - LABORE - FOLHA
+RM - LABORE - FORMULAS
+TESTIS
+RM - TESTIS - AVALIAÇÕES
+AGILIS
+RM - AGILIS - WORKFLOW
+CLASSIS
+RM - CLASSIS - GESTÃO EDUCACIONAL
+RM - CLASSIS NET
+BIBLIOS
+RM - BIBLIOS - GESTÃO DE BIBLIOTECAS
+SOLUM
+RM - SOLUM - GESTÃO DE OBRAS
+OFFICINA
+RM - OFFICINA - GESTÃO DE MANUTENÇÃO
+SGI
+RM - SGI - GESTÃO IMOBILIARIA
+FACTOR
+RM - FACTOR - GESTÃO DE MANUFATURA
+FRAME WORK
+RM - ARQUITETURA E INSTALAÇÃO RM
+BI
+RM - CONSULTAS SQL + RM BIS
+BANCO DE DADOS
+RM - PROGR. EM SQL SERVER - AMB CORPORE
+RELATÓRIOS
+RM - GERADOR RELATÓRIOS - LABORE
+RM - GERADOR RELATÓRIOS - FLUXUS
+RM - GERADOR RELATÓRIOS - NUCLEUS
+/////////////////////////////////////NOVOS////////////////////////////////////////////////////////////////
+AGILIS
+AMBIENTES DE PROGRAMAÇÃO
+AOP
+AUTOMAÇÃO COMERCIAL
+AUTOMAÇÃO DE BUILD
+BANCO DE DADOS
+BI
+BIBLIOS
+BONUM
+CHRONUS
+CLASSIS
+COMÉRCIO EXTERIOR
+CONCESSIONÁRIAS
+CONHECIMENTOS GERAIS WEB
+CONTROLADORIA - CONTáBIL / FISCAL
+CONTROLADORIA - FINANCEIRO
+CONTROLADORIA - SPED
+CRM
+DESENVOLVIMENTO
+DESENVOLVIMENTO ESB
+DESENVOLVIMENTO GOODDATA
+DESENVOLVIMENTO IDENTITY
+DESENVOLVIMENTO MOBILE
+DIST. E LOGÍSTICA - OMS
+DIST. E LOGÍSTICA - TMS
+DIST. E LOGÍSTICA - WMS
+EDUC.
+FACTOR
+FERRAMENTAS DE INTEGRAÇÃO
+FERRAMENTAS DE TESTE
+FERRAMENTAS DE VERSIONAMENTO
+FLUXUS
+FRAME WORK
+FRAMEWORK DE PERSISTÊNCIA
+FRAMEWORKS JAVASCRIPT
+FUNCIONALIDADE
+GFE
+IMPLANTAÇÃO - CONFIGURAÇÃO FLUIG PLATAFORMA
+IMPLANTAÇÃO - WCM E BPM
+INFRA-ESTRUTURA
+INICIANDO
+INSTALAÇÃO
+LABORE
+LIBER
+MATERIAIS
+METODOLOGIAS DE TRABALHO
+MVC
+NF
+NUCLEUS
+OFFICINA
+PLATAFORMA JAVA
+PMS
+QUALIDADE
+RECURSOS HUMANOS
+RELATÓRIOS
+SALDUS
+SAÚDE
+SERVIDORES DE APLICAÇÃO
+SGI
+SOLUM
+TESTIS
+VENDAS
+VITAE
+//////////////////////////////////////////////////////////FLUIG
+dsPDF.values[0]['instFluig'], 'INSTALAÇÃO FLUIG
+dsPDF.values[0]['instFlIdentFluig'], 'INSTALAÇÃO DO FLUIG IDENTITY
+dsPDF.values[0]['instFlIdentADFluig'], 'CONFIGURAÇÃO DO FLUIG IDENTITY (AD E PROD. TOTVS)
+dsPDF.values[0]['crBaseDadosFluig'], 'CRIAÇÃO DE BASE DE DADOS FLUIG
+dsPDF.values[0]['confRedeFluig'], 'CONFIGURAÇÃO REDE (DMZ, DNS, SSL)
+dsPDF.values[0]['altDispFluig'], 'ALTA DISPONIBILIDADE(TOMCAT, BIGIP)
+dsPDF.values[0]['confECM'], 'CONFIGURAÇÃO DO ECM
+dsPDF.values[0]['confBPM'], 'CONFIGURAÇÃO DO BPM
+dsPDF.values[0]['confWCM'], 'CONFIGURAÇÃO DO WCM
+dsPDF.values[0]['confSocial'], 'CONFIGURAÇÃO DO SOCIAL
+dsPDF.values[0]['devFormHtmlCompl'], 'DESENVOLVIMENTO DE FORMULÁRIOS HTML COMPLEXOS
+dsPDF.values[0]['layWcmCustHtmlJS'], 'LAYOUTS WCM CUSTOMIZADOS EM HTML E JAVA SCRIPT
+dsPDF.values[0]['widWcmCustHtmlJS'], 'WIDGETS WCM CUSTOMIMZADOS HTML E JAVA SCRIPT
+dsPDF.values[0]['acWebService'], 'ACESSO AO WEB SERVICES SOAP/REST
+dsPDF.values[0]['devCompEspIntSist'], 'DESENVOLVIMENTO DE COMPONENTES ESPECÍFICOS DE INTEGRAÇÃO COM SISTEMAS
+dsPDF.values[0]['devCompIntSist'], 'DESENVOLVIMENTO DE COMPONENTES DE INTEGRAÇÃO COM SISTEMAS
+dsPDF.values[0]['devMobFormHtmlCompl'], 'DESENVOLVIMENTO DE FORMULÁRIOS HTML COMPLEXOS
+dsPDF.values[0]['flAnalytEvent'], 'FLUIG ANALYTICS E EVENTOS
+dsPDF.values[0]['devProjViaCloudConn'], 'DESENVOLVIMENTO DE PROJETOS VIA CLOUD CONNECT (MODELAGEM E CARGAS)
+dsPDF.values[0]['devRelatDashb'], 'DESENVOLVIMENTO DE RELATÓRIOS E DASHBOARDS VIA PLATAFORMA SAAS
+dsPDF.values[0]['devMetUtil'], 'DESENVOLVIMENTO DE MÉTRICAS UTILIZANDO MAQL
+dsPDF.values[0]['admPlatViaSaas'], 'ADMINISTRADOR DA PLATAFORMA VIA SAAS
+dsPDF.values[0]['funcProthReport'], 'PROTHEUS REPORT
+dsPDF.values[0]['painOnLine'], 'PAINEIS ON-LINE
+dsPDF.values[0]['totvsOffInterface'], 'TOII TOTVS OFFICE INTERFACE
+dsPDF.values[0]['protheusSearch'], 'PROTHEUS SEARCH
+dsPDF.values[0]['indDwNativos'], 'INDICADORES DW NATIVOS
+dsPDF.values[0]['painOffLine'], 'PAINEIS OFF-LINE
+///////////////////////////////////////////JAVA
+dsPDF.values[0]['jsfRichFaces'], 'JSF/RICH FACES *
+dsPDF.values[0]['jsfPrimeFaces'], 'JSF/PRIMEFACES *
+dsPDF.values[0]['jsfIceFaces'], 'JSF/ICE FACES *
+dsPDF.values[0]['jsfMyFaces'], 'JSF/MY FACES *
+dsPDF.values[0]['struts1'], 'STRUTS 1 *
+dsPDF.values[0]['struts2'], 'STRUTS 2
+dsPDF.values[0]['springMvc'], 'SPRING MVC
+dsPDF.values[0]['servlets'], 'SERVLETS
+dsPDF.values[0]['jsp'], 'JSP
+//FRAMEWORK DE PERSISTÊNCIA
+dsPDF.values[0]['hibernate'], 'HIBERNATE
+dsPDF.values[0]['jpa'], 'JPA
+dsPDF.values[0]['jdbc'], 'JDBC
+dsPDF.values[0]['springBoot'], 'SPRINGBOOT -
+dsPDF.values[0]['micronaut'], 'MICRONAUT -
+dsPDF.values[0]['quarkus'], 'QUARKUS -
+dsPDF.values[0]['eclipseLink'], 'ECLIPSE LINK *
+dsPDF.values[0]['topLink'], 'TOP LINK *
+dsPDF.values[0]['ibatis'], 'IBATIS *
+dsPDF.values[0]['jdo'], 'JDO *
+dsPDF.values[0]['ejb31'], 'EJB 3.1 *
+dsPDF.values[0]['ejb30'], 'EJB 3.0 *
+dsPDF.values[0]['ejb21'], 'EJB 2.1 *
+
+dsPDF.values[0]['spring3'], 'SPRING 3
+dsPDF.values[0]['spring2'], 'SPRING 2
+dsPDF.values[0]['jms3'], 'JMS 3
+dsPDF.values[0]['jms2'], 'JMS 2
+dsPDF.values[0]['WebServiceSoap'], 'WEBSERVICES SOAP
+dsPDF.values[0]['WebServiceRest'], 'WEBSERVICES REST
+
+dsPDF.values[0]['html5'], 'HTML 5
+dsPDF.values[0]['JavaScript'], 'JAVASCRIPT
+dsPDF.values[0]['json'], 'JSON
+dsPDF.values[0]['css'], 'CSS
+dsPDF.values[0]['ajax'], 'AJAX
+
+dsPDF.values[0]['jUnit'], 'JUNIT
+dsPDF.values[0]['selenium'], 'SELENIUM
+dsPDF.values[0]['apache'], 'APACHE'
+dsPDF.values[0]['mockito'], 'APACHE'
+dsPDF.values[0]['arquilian'], 'ARQUILIAN *
+dsPDF.values[0]['cactus'], 'CACTUS *
+
+dsPDF.values[0]['jQuery'], 'JQUERY
+dsPDF.values[0]['nodeJS'], 'NODE JS
+dsPDF.values[0]['extJS'], 'EXT JS
+dsPDF.values[0]['javaScriptMvc'], 'JAVACRIPT MVC
+dsPDF.values[0]['gooWebToolKit'], 'GOOGLE WEB TOOLKIT *
+dsPDF.values[0]['dojo'], 'DOJO *
+dsPDF.values[0]['yui'], 'YUI *
+
+dsPDF.values[0]['svn'], 'SVN
+dsPDF.values[0]['git'], 'GIT
+dsPDF.values[0]['cvs'], 'CVS *
+dsPDF.values[0]['mercurial'], 'MERCURIAL *
+
+dsPDF.values[0]['maven'], 'MAVEN
+dsPDF.values[0]['gradule'], 'GRADULE' -
+dsPDF.values[0]['ant'], 'ANT *
+dsPDF.values[0]['ivy'], 'IVY *
+
+dsPDF.values[0]['oracle'], 'ORACLE
+dsPDF.values[0]['sqlServer'], 'SQL SERVER
+dsPDF.values[0]['postgree'], 'POSTGREE
+dsPDF.values[0]['db2'], 'DB2
+dsPDF.values[0]['mySql'], 'MYSQL
+
+dsPDF.values[0]['eclipse'], 'ECLIPSE
+dsPDF.values[0]['netbeans'], 'NETBEANS
+dsPDF.values[0]['jDeveloper'], 'JDEVELOPER *
+
+dsPDF.values[0]['scrum'], 'SCRUM
+dsPDF.values[0]['xp'], 'XP
+dsPDF.values[0]['lean'], 'LEAN
+dsPDF.values[0]['agile'], 'AGILE
+
+dsPDF.values[0]['tomCat'], 'TOMCAT
+dsPDF.values[0]['jBoss'], 'JBOSS
+dsPDF.values[0]['webSphere'], 'WEBSPHERE
+dsPDF.values[0]['webLogic'], 'WEBLOGIC
+dsPDF.values[0]['glassFish'], 'GLASSFISH
+
+dsPDF.values[0]['aspectj'], 'ASPECTJ
+dsPDF.values[0]['jBossAop'], 'JBOSS AOP
+dsPDF.values[0]['jSpringAop'], 'SPRING AOP
+
+dsPDF.values[0]['mobAndroid'], 'MOBILE / ANDROID
+dsPDF.values[0]['platafWeb'], 'PLATAFORMA WEB
+dsPDF.values[0]['desktopSwing'], 'DESKTOP / SWING
+dsPDF.values[0]['reflection'], 'REFLECTION
+dsPDF.values[0]['lingJava'], 'LINGUAGEM JAVA
+////////////////////////////////////////////////////////PROTH
+dsPDF.values[0]['infraEstrut'], 'INFRA-ESTRUTURA
+dsPDF.values[0]['totvsMon'], 'TOTVS MONITOR
+dsPDF.values[0]['replDados'], 'RÉPLICA DE DADOS
+dsPDF.values[0]['mcsMobConnStudio'], 'MCS MOBLIE CONNECTIVITY STUDIO
+dsPDF.values[0]['configurador'], 'CONFIGURADOR
+dsPDF.values[0]['totvsDBAccess'], 'TOTVS DBACCESS
+dsPDF.values[0]['totvsDBAuditTrail'], 'TOTVS DBAUDIT TRAIL
+dsPDF.values[0]['compras'], 'COMPRAS
+dsPDF.values[0]['faturamento'], 'FATURAMENTO
+dsPDF.values[0]['estoqCusto'], 'ESTOQUE/CUSTOS
+dsPDF.values[0]['contrProducao'], 'CONTROLE DE PRODUÇÃO
+dsPDF.values[0]['contrCustos'], 'CONTROLE DE CUSTOS
+dsPDF.values[0]['planContrProd'], 'PLANEJAMENTO E CONTROLE DE PRODUÇÃO - PCP
+dsPDF.values[0]['gestContrato'], 'GESTÃO DE CONTRATOS
+dsPDF.values[0]['manutAtivosMnt'], 'MANUTENÇÃO DE ATIVOS (MNT)
+dsPDF.values[0]['manutFrota'], 'MANUTENÇÃO DE FROTA
+dsPDF.values[0]['gestAgricola'], 'GESTÃO AGRÍCOLA
+dsPDF.values[0]['spedFiscal'], 'SPED FISCAL
+dsPDF.values[0]['spedContabil'], 'SPED CONTáBIL
+dsPDF.values[0]['nfe'], 'NF-E
+dsPDF.values[0]['contabGerencial'], 'CONTABILIDADE GERENCIAL
+dsPDF.values[0]['ativoFixo'], 'ATIVO FIXO
+dsPDF.values[0]['fiscLivrFiscal'], 'FISCAL (LIVROS FISCAIS)
+dsPDF.values[0]['planContrOrcam'], 'PLANEJAMENTO E CONTROLE ORÇAMENTÁRIO
+dsPDF.values[0]['contPagar'], 'CONTAS A PAGAR
+dsPDF.values[0]['contReceber'], 'CONTAS A RECEBER
+dsPDF.values[0]['movtoBancario'], 'MOVIMENTAÇÃO BANCÁRIA
+dsPDF.values[0]['cnab'], 'CNAB
+dsPDF.values[0]['gestProjetosPms'], 'GESTÃO DE PROJETOS - PMS
+dsPDF.values[0]['prothGesArmWms'], 'GESTÃO DE ARMAZENAGEM - WMS
+dsPDF.values[0]['prothGesTranTms'], 'GESTÃO DE TRANSPORTE - TMS
+dsPDF.values[0]['distDistrOms'], 'GESTÃO DE DISTRIBUIÇÃO - OMS
+dsPDF.values[0]['gestFretEmbGfe'], 'GESTÃO DE FRETE EMBARCADOR - GFE
+dsPDF.values[0]['crmCalCen'], 'CALL CENTER
+dsPDF.values[0]['crmGesPesRes'], 'GESTÃO DE PESQUISA E RESULTADO
+dsPDF.values[0]['fieldServAssTec'], 'FIELD SERVICE - (ASSIST. TÉCNICA)
+dsPDF.values[0]['prothGesPes'], 'GESTÃO PESSOAL
+dsPDF.values[0]['prothPonElet'], 'PONTO ELETRÔNICO
+dsPDF.values[0]['prothRecSelPes'], 'RECRUTAMENTO E SELEÇÃO DE PESSOAL
+dsPDF.values[0]['prothTrein'], 'TREINAMENTO
+dsPDF.values[0]['prothCarSal'], 'CARGOS E SALÁRIOS
+dsPDF.values[0]['prothAvaPesDes'], 'AVALIAÇÃO E PESQUISA DE DESEMPENHO
+dsPDF.values[0]['prothProcTrab'], 'PROCESSOS TRABALHISTAS
+dsPDF.values[0]['prothMedSegTrab'], 'MEDICINA E SEGURANÇA DO TRABALHO
+dsPDF.values[0]['prothEsoc'], 'E-SOCIAL
+dsPDF.values[0]['prothGesPesMetro'], 'GESTÃO PESSOAL METROLOGIA (QMT)
+dsPDF.values[0]['prothPonEleCon'], 'PONTO ELETRÔNICO CONTROLE DE NÃO-CONFORMIDADES (QNC)
+dsPDF.values[0]['prothRecSelPesIns'], 'RECRUTAMENTO E SELEÇÃO DE PESSOAL INSPEÇÃO DE PROCESSOS (QIP)
+dsPDF.values[0]['prothMetrol'], 'METROLOGIA (QMT)
+dsPDF.values[0]['prothConNaoConfQnc'], 'CONTROLE DE NÃO-CONFORMIDADES (QNC)
+dsPDF.values[0]['prothInsPro'], 'INSPEÇÃO DE PROCESSOS (QIP)
+dsPDF.values[0]['prothInsEnt'], 'INSPEÇÃO DE ENTRADA (QIE)
+dsPDF.values[0]['prothGesAmb'], 'GESTÃO AMBIENTAL
+dsPDF.values[0]['prothGesRis'], 'GESTÃO DE RISCO
+dsPDF.values[0]['prothContAud'], 'CONTROLE DE AUDITORIAS
+dsPDF.values[0]['prothContDocQdo'], 'CONTROLE DE DOCUMENTOS (QDO)
+dsPDF.values[0]['prothPpaMedPec'], 'PPAP - MEDIÇÃO DE PEÇAS
+dsPDF.values[0]['prothContLojSig'], 'CONTROLE DE LOJA (SIGALOJA)
+dsPDF.values[0]['prothFidAnaCred'], 'FIDELIZAÇÃO E ANALISE DE CREDITO
+dsPDF.values[0]['prothFroLojFlj'], 'FRONT LOJA (FLJ)
+dsPDF.values[0]['prothOficinas'], 'OFICINAS
+dsPDF.values[0]['prothVeiculos'], 'VEÍCULOS
+dsPDF.values[0]['prothPecas'], 'PEÇAS
+dsPDF.values[0]['prothBiBpm'], 'BPM
+dsPDF.values[0]['prothBiGesInd'], 'GESTÃO DE INDICADORES
+dsPDF.values[0]['prothBiWorFlo'], 'WORKFLOW
+dsPDF.values[0]['prothBiBalSco'], 'BALANCED SCORECARD
+dsPDF.values[0]['prothBiDatWerHou'], 'DATAWEREHOUSE
+dsPDF.values[0]['prothComExtBpm'], 'BPM
+dsPDF.values[0]['prothComExtGesInd'], 'GESTÃO DE INDICADORES
+dsPDF.values[0]['prothComExtWorflo'], 'WORKFLOW
+dsPDF.values[0]['prothComExtBalSco'], 'BALANCED SCORECARD
+dsPDF.values[0]['prothComExtDatWer'], 'DATAWEREHOUSE
+dsPDF.values[0]['prothGesHospitalar'], 'GESTÃO HOSPITALAR
+dsPDF.values[0]['prothDirAutorais'], 'DIREITOS AUTORAIS
+dsPDF.values[0]['prothAutForVen'], 'AUTOMAÇÃO DA FORÇA DE VENDAS (SFA)
+dsPDF.values[0]['prothAutEntRap'], 'AUTOMAÇÃO DA ENTREGA RAPIDA
+dsPDF.values[0]['prothGesEduc'], 'GESTÃO EDUCACIONAL
+dsPDF.values[0]['prothGesAcerv'], 'GESTÃO ACERVOS
+dsPDF.values[0]['prothAssConfServ'], 'ASSISTENTE DE CONFIGURAÇÕES DO SERVIDOR
+dsPDF.values[0]['prothIntRep'], 'INTEGRAÇÃO REPORTS
+dsPDF.values[0]['prothIntCry'], 'INTEGRAÇÃO CRYSTAL
+dsPDF.values[0]['prothConRel'], 'CONSULTA RELACIONAL
+dsPDF.values[0]['prothPadOpe'], 'PADRÃO DE OPERAÇÃO
+dsPDF.values[0]['prothFuncProthReport'], 'PROTHEUS REPORT
+dsPDF.values[0]['prothPainOnl'], 'PAINEIS ON-LINE
+dsPDF.values[0]['prothTotOffInter'], 'TOII TOTVS OFFICE INTERFACE
+dsPDF.values[0]['prothSea'], 'PROTHEUS SEARCH
+dsPDF.values[0]['prothIndDwNat'], 'INDICADORES DW NATIVOS
+dsPDF.values[0]['prothPainOffli'], 'PAINEIS OFF-LINE
+dsPDF.values[0]['desProthReport'], 'PROTHEUS REPORT
+///////////////////////////////////////////////RM
+dsPDF.values[0]['rmNucCompras'],
+dsPDF.values[0]['rmNucProcess'],
+dsPDF.values[0]['rmNucFaturam'],
+dsPDF.values[0]['rmNucRessuprim'],
+dsPDF.values[0]['rmNucEstoques'],
+dsPDF.values[0]['rmSalContab'],
+dsPDF.values[0]['rmSalFecham'],
+dsPDF.values[0]['rmLibFiscal'],
+dsPDF.values[0]['rmLibSpedFis'],
+dsPDF.values[0]['rmNfe'],
+dsPDF.values[0]['rmBonAti'],
+dsPDF.values[0]['rmFluContPag'],
+dsPDF.values[0]['rmFluContRec'],
+dsPDF.values[0]['rmFluApliEmp'],
+dsPDF.values[0]['rmFluGesFin'],
+dsPDF.values[0]['rmVitTreina'],
+dsPDF.values[0]['rmVitRec'],
+dsPDF.values[0]['rmVitSegMed'],
+dsPDF.values[0]['rmChroPonEle'],
+dsPDF.values[0]['rmLabFolha'],
+dsPDF.values[0]['rmLabForm'],
+dsPDF.values[0]['rmTestAval'],
+dsPDF.values[0]['rmAgiWork'],
+dsPDF.values[0]['rmClasGesEdu'],
+dsPDF.values[0]['rmClasNet'],
+dsPDF.values[0]['rmBibGesBib'],
+dsPDF.values[0]['rmSolGesObr'],
+dsPDF.values[0]['rmOffGesManu'],
+dsPDF.values[0]['rmSgiGesImob'],
+dsPDF.values[0]['rmFacGesManu'],
+dsPDF.values[0]['rmArqInsRm'],
+dsPDF.values[0]['rmConsSqlBis'],
+dsPDF.values[0]['rmProgSqlAmbCorp'],
+dsPDF.values[0]['rmGerRelLab'],
+dsPDF.values[0]['rmGerRelFlux'],
+dsPDF.values[0]['rmGerRelNuc'],
+
+INSTALAÇÃO FLUIG
+CONFIGURAÇÃO DO ECM
+CONFIGURAÇÃO DO BPM
+DESENVOLVIMENTO DE FORMULÁRIOS HTML COMPLEXOS
+LAYOUTS WCM CUSTOMIZADOS EM HTML E JAVA SCRIPT
+DESENVOLVIMENTO DE COMPONENTES ESPECÍFICOS DE INTEGRAÇÃO COM SISTEMAS
+DESENVOLVIMENTO DE COMPONENTES DE INTEGRAÇÃO COM SISTEMAS
+DESENVOLVIMENTO DE FORMULÁRIOS HTML COMPLEXOS
+FLUIG ANALYTICS E EVENTOS
+DESENVOLVIMENTO DE PROJETOS VIA CLOUD CONNECT (MODELAGEM E CARGAS)
+DESENVOLVIMENTO DE RELATÓRIOS E DASHBOARDS VIA PLATAFORMA SAAS
+DESENVOLVIMENTO DE MÉTRICAS UTILIZANDO MAQL
+ADMINISTRADOR DA PLATAFORMA VIA SAAS
+PROTHEUS REPORT
+PAINEIS ON-LINE
+TOII TOTVS OFFICE INTERFACE
+PROTHEUS SEARCH
+INDICADORES DW NATIVOS
+PAINEIS OFF-LINE
+JSF/RICH FACES
+HIBERNATE
+JPA
+EJB 3.1
+EJB 3.0
+SPRING 2
+JMS 3
+HTML 5
+JAVASCRIPT
+JSON
+CSS
+AJAX
+JUNIT
+SELENIUM
+ARQUILIAN
+CACTUS
+JQUERY
+NODE JS
+EXT JS
+JAVACRIPT MVC
+GOOGLE WEB TOOLKIT
+DOJO
+YUI
+SVN
+GIT
+CVS
+MERCURIAL
+MAVEN
+ANT
+IVY
+ORACLE
+SQL SERVER
+POSTGREE
+DB2
+MYSQL
+ECLIPSE
+NETBEANS
+JDEVELOPER
+SCRUM
+XP
+LEAN
+AGILE
+TOMCAT
+JBOSS
+WEBSPHERE
+WEBLOGIC
+GLASSFISH
+ASPECTJ
+JBOSS AOP
+SPRING AOP
+MOBILE / ANDROID
+PLATAFORMA WEB
+DESKTOP / SWING
+REFLECTION
+LINGUAGEM JAVA
+INFRA-ESTRUTURA
+COMPRAS
+FATURAMENTO
+SPED FISCAL
+SPED CONTáBIL
+CONTABILIDADE GERENCIAL
+ATIVO FIXO
+FISCAL (LIVROS FISCAIS)
+PLANEJAMENTO E CONTROLE ORÇAMENTÁRIO
+CONTAS A PAGAR
+CONTAS A RECEBER
+MOVIMENTAÇÃO BANCÁRIA
+CNAB
+GESTÃO DE PROJETOS - PMS
+GESTÃO DE ARMAZENAGEM - WMS
+GESTÃO DE TRANSPORTE - TMS
+GESTÃO DE DISTRIBUIÇÃO - OMS
+GESTÃO DE FRETE EMBARCADOR - GFE
+CALL CENTER
+GESTÃO DE PESQUISA E RESULTADO
+FIELD SERVICE - (ASSIST. TÉCNICA)
+GESTÃO PESSOAL
+PONTO ELETRÔNICO
+RECRUTAMENTO E SELEÇÃO DE PESSOAL
+TREINAMENTO
+CARGOS E SALÁRIOS
+AVALIAÇÃO E PESQUISA DE DESEMPENHO
+PROCESSOS TRABALHISTAS
+MEDICINA E SEGURANÇA DO TRABALHO
+E-SOCIAL
+GESTÃO PESSOAL METROLOGIA (QMT)
+PONTO ELETRÔNICO CONTROLE DE NÃO-CONFORMIDADES (QNC)
+RECRUTAMENTO E SELEÇÃO DE PESSOAL INSPEÇÃO DE PROCESSOS (QIP)
+METROLOGIA (QMT)
+CONTROLE DE NÃO-CONFORMIDADES (QNC)
+INSPEÇÃO DE PROCESSOS (QIP)
+INSPEÇÃO DE ENTRADA (QIE)
+GESTÃO AMBIENTAL
+GESTÃO DE RISCO
+CONTROLE DE AUDITORIAS
+CONTROLE DE DOCUMENTOS (QDO)
+PPAP - MEDIÇÃO DE PEÇAS
+CONTROLE DE LOJA (SIGALOJA)
+FIDELIZAÇÃO E ANALISE DE CREDITO
+FRONT LOJA (FLJ)
+OFICINAS
+VEÍCULOS
+PEÇAS
+BPM
+GESTÃO DE INDICADORES
+WORKFLOW
+BALANCED SCORECARD
+DATAWEREHOUSE
+BPM
+GESTÃO DE INDICADORES
+WORKFLOW
+BALANCED SCORECARD
+DATAWEREHOUSE
+GESTÃO HOSPITALAR
+DIREITOS AUTORAIS
+AUTOMAÇÃO DA FORÇA DE VENDAS (SFA)
+AUTOMAÇÃO DA ENTREGA RAPIDA
+GESTÃO EDUCACIONAL
+GESTÃO ACERVOS
+ASSISTENTE DE CONFIGURAÇÕES DO SERVIDOR
+INTEGRAÇÃO REPORTS
+INTEGRAÇÃO CRYSTAL
+CONSULTA RELACIONAL
+PADRÃO DE OPERAÇÃO
+PROTHEUS REPORT
+PAINEIS ON-LINE
+TOII TOTVS OFFICE INTERFACE
+PROTHEUS SEARCH
+INDICADORES DW NATIVOS
+PAINEIS OFF-LINE
+PROTHEUS REPORT
+RM - NUCLEUS - COMPRAS
+RM - SALDUS - CONTABILIDADE
+RM - SALDUS -FECHAMENTOS
+RM - LIBER - FISCAL
+RM - LIBER - SPED FISCAL
+RM - NFE
+RM - BONUM - ATIVO
+RM - FLUXUS - CONTAS A PAGAR
+RM - FLUXUS - CONTAS A RECEBER
+RM - FLUXUS - APLICAÇÕES E EMPRESTIMOS
+RM - FLUXUS - GESTÃO FINANCEIRA
+RM - VITAE - TREINAMENTO
+RM - VITAE - RECRUTAMENTO
+RM - VITAE - SEGURANÇA E MEDICINA
+RM - CHRONUS - PONTO ELETRONICO
+RM - LABORE - FOLHA
+RM - LABORE - FORMULAS
+RM - TESTIS - AVALIAÇÕES
+RM - AGILIS - WORKFLOW
+RM - CLASSIS - GESTÃO EDUCACIONAL
+RM - CLASSIS NET
+RM - BIBLIOS - GESTÃO DE BIBLIOTECAS
+RM - SOLUM - GESTÃO DE OBRAS
+RM - OFFICINA - GESTÃO DE MANUTENÇÃO
+RM - SGI - GESTÃO IMOBILIARIA
+RM - FACTOR - GESTÃO DE MANUFATURA
+RM - ARQUITETURA E INSTALAÇÃO RM
+RM - CONSULTAS SQL + RM BIS
+RM - PROGR. EM SQL SERVER - AMB CORPORE
+RM - GERADOR RELATÓRIOS - LABORE
+RM - GERADOR RELATÓRIOS - FLUXUS
+RM - GERADOR RELATÓRIOS - NUCLEUS
