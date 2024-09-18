@@ -25,7 +25,7 @@ var ds = DatasetFactory.getDataset('formMatrizCapacitacao', null, null, null);  
 var c1 = DatasetFactory.createConstraint('metadata#active', true, true, ConstraintType.MUST);
 var ds = DatasetFactory.getDataset('nomeDataset', null, c1, null)
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////CONSULTAS CHAVE/////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////LIMITAR CONSULTAS///////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 var c1 = DatasetFactory.createConstraint('metadata#active', true, true, ConstraintType.MUST);
 var c2 = DatasetFactory.createConstraint("sqlLimit", "10", "10", ConstraintType.MUST);                   //filtra a quantidade de registros desejados (de 1 a 100)
@@ -67,7 +67,7 @@ function createDataset(fields, constraints, sortFields) {
 	var dataset = DatasetBuilder.newDataset();
 	dataset.addColumn("Produto");
 	dataset.addColumn("Valor");
-	dataset.addRow(new Array("Refrigerador", 1500));                                                //adiciona uma linha Refrigerador 1500
+	dataset.addRow(new Array("Refrigerador", 1500));                                                //adiciona linhas "chumbadas" para fazer uma tabela
 	dataset.addRow(new Array("Guarda-Roupas", 2000));
 	dataset.addRow(new Array("Fogão", 3500));
 	dataset.addRow(new Array("Ferro de passar", 100));
@@ -96,7 +96,7 @@ function createDataset(fields, constraints, sortFields) {
     if (dsInterno.rowsCount > 0) {                                              // VERIFICA SE RETORNOU
 		for (var i = 0; i < dsInterno.rowsCount; i++) {							//CASO RETORNE, PERCORRE OS DADOS
 			ds.addRow(new Array(
-				dsInterno.getValue(i, 'arq'),									//Com os dados do interno, constroe o novo
+				dsInterno.getValue(i, 'arq'),									//Com os dados do interno, constroe uma tabela
 				dsInterno.getValue(i, 'diaehora')
 				));
 		}
@@ -185,4 +185,35 @@ function formatarData(data) {
     }
     // Caso já esteja no formato correto, retorne a data como está
     return data;
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////Consulta De Dataset//////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//onde dataset é o nome do dataset que deseja consultar, variavelChave é a variavel que deseja consultar, valorChave é o valor que deseja consultar do ds
+function consultarDataset(dataset, variavelChave, valorChave) {
+    var constraints = [];
+    constraints.push(DatasetFactory.createConstraint('metadata#active', true, true, ConstraintType.MUST));
+	constraints.push(DatasetFactory.createConstraint(variavelChave, valorChave, valorChave, ConstraintType.MUST));
+    var fields = ["id", "id2", "id3"];
+    var ds = DatasetFactory.getDataset(dataset, fields, constraints, null);
+    return ds; // ds.values
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////CONSTRAINTS//////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+function createDataset(fields, constraints, sortFields) {
+    var dataset = DatasetBuilder.newDataset();
+	// caso deseje 
+    var idTae = "";
+	if (constraints != null) {
+        for (var i = 0; i < constraints.length; i++) {
+            if (constraints[i].fieldName == "cod_client"){ 
+                cod_client = constraints[i].initialValue;
+            }
+			else if (constraints[i].fieldName == "idTae"){
+                idTae = constraints[i].initialValue;
+            }
+        }
+    }
+    return dataset;
 }
