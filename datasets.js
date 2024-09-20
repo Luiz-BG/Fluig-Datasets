@@ -6,10 +6,10 @@
 var c1 = DatasetFactory.createConstraint(fieldName, initialValue, finalValue, ConstraintType.MUST);
 var c1 = DatasetFactory.createConstraint(fieldName, initialValue, finalValue, ConstraintType.SHOULD);
 var c1 = DatasetFactory.createConstraint(fieldName, initialValue, finalValue, ConstraintType.MUST_NOT);
-fieldName	    =   Nome do campo
-initialValue	=   Valor inicial para filtro neste campo
-finalValue	    =   Valor final para filtro neste campo
-ContraintType	=   Tipo do filtro deste campo, podendo ter os valores abaixo:
+										fieldName	    =   Nome do campo
+													initialValue	=   Valor inicial para filtro neste campo
+																	finalValue	    =   Valor final para filtro neste campo
+																			ContraintType	=   Tipo do filtro deste campo, podendo ter os valores abaixo:
 
                     MUST: O valor informado precisa estar nos resultados
 
@@ -203,7 +203,7 @@ function consultarDataset(dataset, variavelChave, valorChave) {
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function createDataset(fields, constraints, sortFields) {
     var dataset = DatasetBuilder.newDataset();
-	// caso deseje 
+	// caso deseje passar constraints com values
     var idTae = "";
 	if (constraints != null) {
         for (var i = 0; i < constraints.length; i++) {
