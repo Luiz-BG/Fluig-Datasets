@@ -3,14 +3,13 @@
 ## Índice
 
 1. [Pré-requisitos](#1-pré-requisitos)
-2. [Clonando o Repositório](#2-clonando-o-repositório)
-3. [Criando um Branch](#3-criando-um-branch)
-4. [Fazendo Mudanças e Commit](#4-fazendo-mudanças-e-commit)
-5. [Enviando as Alterações para o Repositório Remoto](#5-enviando-as-alterações-para-o-repositório-remoto)
-6. [Abrindo um Pull Request (PR)](#6-abrindo-um-pull-request-pr)
-7. [Sincronizando com o Repositório Remoto](#7-sincronizando-com-o-repositório-remoto)
-8. [Tipos de Commits](#8-tipos-de-commits)
-9. [Emojis](#9-emojis)
+2. [Criação de Datasets](#2-criação-de-datasets)
+3. [Estrutura base de um dataset](#3-estrutura-base-de-um-dataset)
+4. [Codando seu dataset](#4-codando-seu-dataset)
+5. [Base de um dataset](#5-base-de-um-dataset)
+6. [Elementos específicos do FLUIG](#6-elementos-específicos-do-FLUIG)
+7. [Utilização de datasets em WIDGETS](#7-Utilização-de-datasets-em-WIDGETS)
+8. [Datasets Externos](#8-Datasets-Externos)
 
 ---
 
@@ -77,7 +76,7 @@ São datasets avançados que rodam com uma agenda específica (de minuto em minu
 
 ---
 
-## 5. Codando seu dataset
+## 5. Base de um dataset
 A estrutura de um retorno de dataset sempre será de uma tabela. Com colunas e linhas com dados que o desenvolvedor desejar.
 Podem ser dados chumbados(pré-determinados) com informações que específicas
 
@@ -260,7 +259,7 @@ Informações do cadastro do OAuth application completos
 	var token = {
         'key': '',// Access token do OAuth application
         'secret': ''// Token secret do OAuth application
-    }
+    	}
 	$.ajax({
 		url: request_data.url,
 		contentType: 'application/json',
