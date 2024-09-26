@@ -3,14 +3,15 @@
 # Índice
 
 1. [Pré-requisitos](#1-pré-requisitos)
-2. [Clonando o Repositório](#2-clonando-o-repositório)
-3. [Criando um Branch](#3-criando-um-branch)
-4. [Fazendo Mudanças e Commit](#4-fazendo-mudanças-e-commit)
-5. [Enviando as Alterações para o Repositório Remoto](#5-enviando-as-alterações-para-o-repositório-remoto)
-6. [Abrindo um Pull Request (PR)](#6-abrindo-um-pull-request-pr)
-7. [Sincronizando com o Repositório Remoto](#7-sincronizando-com-o-repositório-remoto)
-8. [Tipos de Commits](#8-tipos-de-commits)
-9. [Emojis](#9-emojis)
+2. [Criação de Datasets](#2-criação-de-Datasets)
+3. [Estrutura base de um dataset](#3-estrutura-base-de-um-dataset)
+4. [Fazendo Mudanças e Commit](#4-tipos-de-dataset)
+5. [Codando seu dataset](#5-codando-seu-dataset)
+6. [Elementos específicos do FLUIG](#6-elementos-específicos-do-FLUIG)
+7. [Utilização de datasets em WIDGETS](#7-utilização-de-datasets-em-WIDGETS)
+8. [Adquirir informações de formulários com tabela pai-filho](#8-adquirir-informaçõe-de-formulários-com-tabela-paifilho)
+9. [Utilização de Datasets externamente](#9-Utilização-de-Datasets-externamente)
+10. [Utilizando SOAP Datasets externos](#10-Utilizando-SOAP-Datasets-externos)
 
 ---
 
@@ -61,7 +62,7 @@ function createDataset(fields, constraints, sortFields) {
 4. ```onMobileSync(user)``` é uma função chamada apenas durante a atualização de um dataset offline já existente. Para evitar o uso desnecessário de armazenamento mobile
 ---
 
-## 4. Codando seu dataset
+## 4. Tipos de dataset
 
 O dataset pode ser estruturado para ser *simples*, *avançado* ou *sincronizado*
 
@@ -244,7 +245,7 @@ Portais que desejam utilizar, enviar ou manipular informações de datasets prec
 
 ---
 
-## 8. Adquirir informações de formulários com tabela pai-filho
+## 8. Adquirir informações de formulários com tabela paiFilho
 
 São exigidos o nome/id da ```tablename```, o número do formulário e o número da versão do documento para extrair todos as linhas de uma tabela pai-filho
 
