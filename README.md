@@ -1,6 +1,6 @@
-# Manipulação de datasets
+# *Manipulação de datasets*
 
-# Índice
+## Índice
 
 1. [Pré-requisitos](#1-pré-requisitos)
 2. [Criação de Datasets](#2-criação-de-Datasets)
@@ -71,13 +71,6 @@ São datasets feitos para retorno de uma tabela com colunas e linhas de determin
 
 # Dataset Avançado
 São datasets que podem ser feitos para retornar uma tabela com informações de outros datasets/formulários do FLUIG. Além de serem capazes de fazer integrações com outros sistemas disponíveis e adquirir informações destes. Eles, possuem menos limitações de funcionalidades e podem utilizar do ```console.log() ``` para fazer o controle de retornos. Este log também pode ser acessado baixando o zip do controle de log da [Homologação](http://192.168.2.15:8080/portal/p/01/wcmlogcontrolpage) ou da [Produção](http://fluigtsm.com.br/portal/p/01/wcmlogcontrolpage)
-***Caminho***
-
-```mermaid 
-graph TD
-
-Painel_de_Controle --> Datasets --> Novo --> Avançado
-```
 
 # Dataset Sincronizado
 São datasets avançados que rodam com uma agenda específica (de minuto em minuto ou até em dias específicos da semana). Eles geralmente são feitos para aqueles com tarefas que requisitam constante atualização de dados de integrações/api's/formulários. Eles possuem uma estrutura de construção parecida com os datasets avançados
@@ -297,8 +290,7 @@ function createDataset(fields, constraints, sortFields) {
 
 Caso seja desenvolvido um portal para uma pessoa que não tem acesso ao FLUIG, é possivel construir uma widget sem necessidade de cadastro.
 Porém a construção do script do portal deve ser diferente, pois o arquivo ``vcXMLRPC.js`` não irá funcionar sem o login do usuário no FLUIG.
-# Será necessário para funcionar:
-
+Será necessário para funcionar:
 - Informações do cadastro do OAuth application completos
 
 ```JS
